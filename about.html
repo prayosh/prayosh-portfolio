@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Prayosh Creations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="./script.js"></script>
+</head>
+<body>
+
+  <div id="backdrop" class="backdrop"></div>
+
+  <!-- Mobile Menu Drawer -->
+  <aside id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="./index.html" class="logo">
+        <span class="logo-main text-white text-lg">PRAYOSH</span>
+        <span class="logo-badge">Creations</span>
+      </a>
+      <button id="close-nav" class="menu-toggle" aria-label="Close menu">
+        <i class="fa-solid fa-xmark fa-xl"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="./index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="./services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="./portfolio.html" class="mobile-nav-link">Portfolio</a></li>
+      <li><a href="./about.html" class="mobile-nav-link active">About Us</a></li>
+      <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/917320072782?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta text-center justify-center font-mono">
+      GET QUOTE <i class="fa-solid fa-fire text-lime-400"></i>
+    </a>
+  </aside>
+
+  <!-- Navigation Header of About Page -->
+  <header class="navbar-wrapper navbar-anim">
+    <nav class="navbar thick-border shadow-cartoon-sm">
+      <a href="./index.html" class="logo">
+        <span class="logo-main">PRAYOSH</span>
+        <span class="logo-badge">Creations</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./services.html" class="nav-link">Services</a></li>
+        <li><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="./about.html" class="nav-link active">About</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/917320072782?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta thin-border">
+        Get Quote <span class="text-xs">✦</span>
+      </a>
+      <button id="menu-toggle" class="menu-toggle thin-border" aria-label="Open menu">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Coming Soon Interactive Comic Cell -->
+  <main class="coming-soon-wrapper">
+    <div class="coming-soon-box thick-border shadow-cartoon-lg" style="transform: rotate(2deg);">
+      <span class="coming-soon-badge" style="background-color: var(--neon-pink); color: black;">OUR CHRONICLES</span>
+      <h1 class="coming-soon-title" style="color: var(--neon-orange);">About Us</h1>
+      <p class="coming-soon-desc">
+        Learn about Pratik's background, his dedication to elevating local Ranchi small businesses and medical clinics, and the modern, high-speed agency spirit driving Prayosh Creations. We are preparing bios!
+      </p>
+      <a href="./index.html" class="btn-cartoon back-btn hover-pop thick-border">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+      </a>
+    </div>
+  </main>
+
+  <!-- --- NEO-BRUTALIST COMIC FOOTER SECTION --- -->
+  <footer class="footer-section thick-border" aria-labelledby="footer-logo">
+    <div class="footer-container">
+      
+      <!-- Column 1: Brand Info -->
+      <div class="footer-col brand-col">
+        <a href="./index.html" class="logo font-space" id="footer-logo">
+          <span class="logo-main">PRAYOSH</span>
+          <span class="logo-badge">Creations</span>
+        </a>
+        <p class="footer-tagline font-space">"Smart Websites That Drive Business Growth."</p>
+        <p class="footer-bio">helping small businesses get a professional online presence — affordable & fast.</p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col links-col">
+        <h3 class="footer-col-title font-space">Quick Links</h3>
+        <ul class="footer-links-list">
+          <li><a href="./index.html" class="footer-link"><span class="arrow-indicator">→</span> Home</a></li>
+          <li><a href="./services.html" class="footer-link"><span class="arrow-indicator">→</span> Services</a></li>
+          <li><a href="./portfolio.html" class="footer-link"><span class="arrow-indicator">→</span> Portfolio</a></li>
+          <li><a href="./about.html" class="footer-link"><span class="arrow-indicator">→</span> About Us</a></li>
+          <li><a href="./contact.html" class="footer-link"><span class="arrow-indicator">→</span> Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact Info -->
+      <div class="footer-col contact-col">
+        <h3 class="footer-col-title font-space">Get In Touch</h3>
+        <ul class="footer-contact-list font-space">
+          <li>
+            <span class="contact-icon">📍</span>
+            <span class="contact-text">Ranchi, Jharkhand</span>
+          </li>
+          <li>
+            <span class="contact-icon">📩</span>
+            <span class="contact-text">prayoshcreations@gmail.com</span>
+          </li>
+          <li>
+            <span class="contact-icon">📞</span>
+            <span class="contact-text">+91 74796 38555</span>
+          </li>
+          <li>
+            <span class="contact-icon">🕐</span>
+            <span class="contact-text">Mon–Sat, 10am – 7pm</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Separated bottom bar with thin or thick comic border -->
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-container">
+        <p class="copyright-text font-mono">© 2025 Prayosh Creations. All rights reserved.</p>
+        <p class="creator-credit font-mono">Designed & Built by <span class="creator-name">Pratik Prajapati</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof gsap !== 'undefined') {
+        gsap.from(".coming-soon-box", {
+          scale: 0.5,
+          rotate: -10,
+          opacity: 0,
+          duration: 0.8,
+          ease: "back.out(1.6)"
+        });
+      }
+    });
+  </script>
+</body>
+</html>

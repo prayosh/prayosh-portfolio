@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayosh Creations — Premium 2D Cartoon Style Web Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- CDNs for External Libraries -->
+  <!-- FontAwesome Free Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+  
+  <!-- GSAP Animation Core + ScrollTrigger plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <!-- JavaScript Script Element -->
+  <script defer src="./script.js"></script>
+</head>
+<body>
+
+  <!-- Backdrop for Mobile Side Panel -->
+  <div id="backdrop" class="backdrop"></div>
+
+  <!-- Responsive Mobile Menu Sidebar (Drawer) -->
+  <aside id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="./index.html" class="logo">
+        <span class="logo-main text-white text-lg">PRAYOSH</span>
+        <span class="logo-badge">Creations</span>
+      </a>
+      <button id="close-nav" class="menu-toggle" aria-label="Close menu">
+        <i class="fa-solid fa-xmark fa-xl"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="./index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="./services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="./portfolio.html" class="mobile-nav-link">Portfolio</a></li>
+      <li><a href="./about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/917320072782?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta text-center justify-center font-mono">
+      GET QUOTE <i class="fa-solid fa-fire text-lime-400"></i>
+    </a>
+  </aside>
+
+  <!-- --- NAVIGATION HEADER --- -->
+  <header class="navbar-wrapper navbar-anim">
+    <nav class="navbar thick-border shadow-cartoon-sm" aria-label="Main Navigation">
+      <!-- Brand Logo -->
+      <a href="./index.html" class="logo">
+        <span class="logo-main">PRAYOSH</span>
+        <span class="logo-badge">Creations</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links">
+        <li><a href="./index.html" class="nav-link active">Home</a></li>
+        <li><a href="./services.html" class="nav-link">Services</a></li>
+        <li><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="./about.html" class="nav-link">About</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Desktop Action CTA button -->
+      <a href="https://wa.me/917320072782?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta thin-border" id="nav-cta-action">
+        Get Quote <span class="text-xs">✦</span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-toggle" class="menu-toggle thin-border" aria-label="Open menu">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- --- MAIN HERO SECTION CONTAINER --- -->
+  <main class="hero-wrapper">
+    
+    <!-- Hero Left Column - Copywriting & CTAs -->
+    <section class="hero-content" aria-labelledby="hero-title">
+     
+      <!-- Headline Block -->
+      <div class="hero-title-group">
+        <h1 id="hero-title" class="reveal-item">
+          Hi, I'm <span class="accent-badge thick-border text-dark">Pratik</span> <br>
+         <span class="font-space mt-2 block">Your Local Website 
+          <span style="color: #fbff7d; font-family: 'Fredoka One', cursive;">
+              Design Partner
+           </span>
+          </span>
+        </h1>
+        <p class="hero-subhook reveal-item font-space">
+          ✦ Smart Websites That Drive Business Growth
+        </p>
+      </div>
+
+      <!-- Interactive 2D Pop Speech bubble containing Typewriter niches -->
+      <div class="speech-bubble-container">
+        <div id="speech-bubble" class="speech-bubble thick-border speech-bubble-helper">
+          <p class="speech-bubble-text">
+            <span id="typewriter-text">I design → <span id="typewriter-niche"></span></span><span class="speech-bubble-cursor">|</span>
+          </p>
+          <div id="speech-bubble-tail" class="speech-bubble-tail"></div>
+        </div>
+      </div>
+
+      <!-- Sub-heading / Biography copy in Tilted Bio Cards -->
+      <div class="bio-cards-container reveal-item">
+        <div class="bio-card bio-card-left thick-border">
+          <p class="hero-bio">
+            I help <span class="highlight-cartoon">small businesses</span>, <span class="highlight-cartoon">local shops & clinics</span> get a <span class="highlight-cartoon">professional online presence</span> — clean design, fast delivery, affordable price.
+          </p>
+        </div>
+        <div class="bio-card bio-card-right thick-border">
+          <p class="hero-bio">
+            <span class="highlight-cartoon">No complicated process</span>, no technical headaches — I handle everything from <span class="highlight-cartoon">design to delivery</span>, so you can focus on running your business.
+          </p>
+        </div>
+      </div>
+
+      <!-- Action call buttons group -->
+      <div class="hero-cta-group btn-anim">
+        <!-- View Work redirect badge -->
+        <a href="./portfolio.html" class="btn-cartoon btn-primary hover-pop thick-border">
+          View My Work <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+        <!-- Whatsapp click element -->
+        <a href="https://wa.me/917320072782?text=Hello%2520Pratik!%2520I'd%2520love%2520to%2520hire%2520you%2520for%2520my%2520agency%2520website!" target="_blank" class="btn-cartoon btn-secondary hover-pop thick-border">
+          <i class="fa-brands fa-whatsapp fa-xl"></i> Contact on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Hero Right Column - Interactive 2D Visual Workspace -->
+    <section class="hero-visual-wrapper" id="hero-visual">
+      <!-- Animated vector retro macOS system mock window -->
+      <div class="retro-window thick-border shadow-cartoon-lg">
+        <div class="retro-window-header">
+          <div class="retro-window-dots">
+            <div class="retro-window-dot dot-red"></div>
+            <div class="retro-window-dot dot-yellow"></div>
+            <div class="retro-window-dot dot-green"></div>
+          </div>
+          <div class="retro-window-title">Prayosh Studio</div>
+          <div style="width: 48px"></div> <!-- Balanced space node -->
+        </div>
+
+        <div class="retro-window-body">
+          <div class="code-canvas">
+            <!-- Central Avatar Illustration Representation -->
+            <div class="web-avatar-circle">
+              <!-- Custom Stylized Illustration of Pratik / Development Work -->
+              <i class="fa-solid fa-laptop-code fa-3x text-black"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Float Stickers surrounding the panel -->
+        <div class="cartoon-sticker sticker-delivery" data-orig-rot="-12">
+          ⚡ 3 DAYS DELIVERY
+        </div>
+        <div class="cartoon-sticker sticker-rating" data-orig-rot="8">
+          ⭐ 5.0 RATED CREATIVE
+        </div>
+        <div class="cartoon-sticker sticker-ranchi" data-orig-rot="15">
+          📍 Ranchi Local Craft
+        </div>
+      </div>
+
+      <!-- Background floating physical comic shape properties -->
+      <div class="floating-element el-1"><i class="fa-solid fa-star shape-star"></i></div>
+      <div class="floating-element el-2"><i class="fa-solid fa-plus shape-cross"></i></div>
+      <div class="floating-element el-3"><div class="shape-circle"></div></div>
+      <div class="floating-element el-4"><i class="fa-solid fa-star shape-star" style="font-size: 1.5rem; color: var(--neon-purple);"></i></div>
+      <div class="floating-element el-5"><i class="fa-solid fa-bolt shape-cross" style="color: var(--neon-orange); font-size: 2rem; filter: drop-shadow(2px 2px 0px #000);"></i></div>
+    </section>
+  </main>
+
+  <!-- --- SEAMLESS VALUE TRUST BLOCK (BENTO GRID) --- -->
+  <section class="trust-badges-wrapper" aria-label="Agency Selling Points">
+    <div class="trust-badges-grid">
+      
+      <!-- Card One: Clean & Modern Design -->
+      <article class="badge-card thick-border shadow-cartoon-sm">
+        <div class="badge-card-icon thick-border">
+          <i class="fa-solid fa-compass-drafting"></i>
+        </div>
+        <h2 class="badge-card-title">Clean & Modern Design</h2>
+        <p class="badge-card-desc">
+          No templates, no copy-paste — every website built from scratch.
+        </p>
+      </article>
+
+      <!-- Card Two: Fresh & Creative -->
+      <article class="badge-card thick-border shadow-cartoon-sm">
+        <div class="badge-card-icon thick-border">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <h2 class="badge-card-title">Fresh & Creative</h2>
+        <p class="badge-card-desc font-space">
+          New ideas, unique layouts, and a design that stands out.
+        </p>
+      </article>
+
+      <!-- Card Three: Affordable Pricing -->
+      <article class="badge-card thick-border shadow-cartoon-sm">
+        <div class="badge-card-icon thick-border">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <h2 class="badge-card-title">Affordable Pricing</h2>
+        <p class="badge-card-desc">
+          Professional quality website without burning a hole in your pocket.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- --- PROCESS - HOW IT WORKS INFOGRAPHIC --- -->
+  <section class="process-section" aria-labelledby="process-title">
+    <div class="process-header">
+      <h2 id="process-title" class="process-main-title">
+        <span class="process-accent">Process</span> — How It Works
+      </h2>
+      <p class="process-subtitle font-space">
+        ✦ Four simple steps to get your high-converting website live with zero stress!
+      </p>
+    </div>
+
+    <div class="process-grid">
+      <!-- Step 1: Talk & Understand -->
+      <div class="process-step-wrapper step-1-wrapper">
+        <div class="process-step thick-border" id="process-step-1">
+          <div class="step-badge thick-border font-mono">01</div>
+          <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3 class="step-title font-space">Talk & Understand</h3>
+          <p class="step-text">
+            Tell me about <span class="highlight-cartoon">your business</span> and <span class="highlight-cartoon">what you need</span> — I'll take it from there.
+          </p>
+        </div>
+        <div class="step-arrow arrow-1"><i class="fa-solid fa-arrow-right"></i></div>
+      </div>
+
+      <!-- Step 2: Design & Build -->
+      <div class="process-step-wrapper step-2-wrapper">
+        <div class="process-step thick-border" id="process-step-2">
+          <div class="step-badge thick-border font-mono">02</div>
+          <div class="step-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3 class="step-title font-space">Design & Build</h3>
+          <p class="step-text">
+            I design and build your website <span class="highlight-cartoon">from scratch</span> — clean, custom and <span class="highlight-cartoon">made just for you</span>.
+          </p>
+        </div>
+        <div class="step-arrow arrow-2"><i class="fa-solid fa-arrow-right"></i></div>
+      </div>
+
+      <!-- Step 3: Review & Refine -->
+      <div class="process-step-wrapper step-3-wrapper">
+        <div class="process-step thick-border" id="process-step-3">
+          <div class="step-badge thick-border font-mono">03</div>
+          <div class="step-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3 class="step-title font-space">Review & Refine</h3>
+          <p class="step-text">
+            You review, <span class="highlight-cartoon">I refine</span> — until you're <span class="highlight-cartoon">completely happy</span> with the result.
+          </p>
+        </div>
+        <div class="step-arrow arrow-3"><i class="fa-solid fa-arrow-right"></i></div>
+      </div>
+
+      <!-- Step 4: Launch & Deliver -->
+      <div class="process-step-wrapper step-4-wrapper">
+        <div class="process-step thick-border" id="process-step-4">
+          <div class="step-badge thick-border font-mono">04</div>
+          <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3 class="step-title font-space">Launch & Deliver</h3>
+          <p class="step-text">
+            Your <span class="highlight-cartoon">website goes live!</span> All setup <span class="highlight-cartoon">handled by me</span>, stress-free for you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- BENEFITS OF HAVING A WEBSITE (STACKED CARD DECK SYSTEM) --- -->
+  <section class="benefits-section" aria-labelledby="benefits-title">
+    <div class="benefits-header">
+      <h2 id="benefits-title" class="benefits-main-title">
+        Your <span class="highlight-yellow-badge">Business</span> Is Open 24/7 — <br class="hidden-xs">But Are You <span class="highlight-yellow-badge">Online?</span>
+      </h2>
+      <p class="benefits-subtitle font-space">
+        While you sleep, your competitor's website is attracting your potential customers. Here's what you're missing without a website.
+      </p>
+    </div>
+
+    <!-- The 6 Cards Deck Container -->
+    <div class="benefits-deck-container">
+      <div id="benefits-deck" class="benefits-deck">
+        
+        <!-- Card 1 -->
+        <div class="benefit-card thick-border" style="background-color: var(--neon-lime);">
+          <div class="benefit-card-content">
+            <h3 class="benefit-card-title font-space">🔍 90% of customers search online before visiting any shop or clinic.</h3>
+            <p class="benefit-card-desc">→ If you're not online, they'll find your competitor — not you.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="benefit-card thick-border" style="background-color: var(--neon-cyan);">
+          <div class="benefit-card-content">
+            <h3 class="benefit-card-title font-space">📉 No website = No credibility.</h3>
+            <p class="benefit-card-desc">→ Today, if a business has no website, customers assume it's either too small or not trustworthy enough to invest in.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="benefit-card thick-border" style="background-color: var(--neon-purple);">
+          <div class="benefit-card-content">
+            <h3 class="benefit-card-title font-space">🕐 Your competitor is already online — and getting YOUR customers.</h3>
+            <p class="benefit-card-desc">→ Every day without a website is a day someone else is taking the business that should have been yours.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="benefit-card thick-border" style="background-color: var(--neon-pink);">
+          <div class="benefit-card-content">
+            <h3 class="benefit-card-title font-space">📱 People judge a business by its online presence in just 3 seconds.</h3>
+            <p class="benefit-card-desc">→ A professional website instantly builds trust — even before they walk in.</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="benefit-card thick-border" style="background-color: var(--neon-orange);">
+          <div class="benefit-card-content">
+            <h3 class="benefit-card-title font-space">💸 Walk-in customers are limited. Online reach is unlimited.</h3>
+            <p class="benefit-card-desc">→ A website lets you reach customers across your entire city — not just people passing by your shop.</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="benefit-card thick-border" style="background-color: var(--neon-yellow);">
+          <div class="benefit-card-content">
+            <h3 class="benefit-card-title font-space">📞 Missed calls = Missed business.</h3>
+            <p class="benefit-card-desc">→ A website works even when you're busy, closed or unavailable — customers can still find you, contact you and enquire about your services 24/7.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Impact Statement in Large & Impactful Typography -->
+    <div class="benefits-impact-statement">
+      <p class="impact-text font-space">
+        "❝ Every month without a website is a month of lost customers, lost trust and lost revenue. ❞"
+      </p>
+    </div>
+
+    <!-- --- WEBSITE READINESS QUIZ (INTERACTIVE 2D CARTOON PANEL) --- -->
+    <section class="quiz-section" aria-labelledby="quiz-title">
+      <div class="quiz-container thick-border">
+        <div class="quiz-badge font-mono">DIGITAL SPEED SCAN</div>
+        
+        <div id="quiz-intro">
+          <h3 id="quiz-title" class="quiz-heading font-space">Is Your Business Truly Ready for Today's Customers?</h3>
+          <p class="quiz-subtext mb-6">
+            Take this quick <strong>10-question Website Readiness Quiz</strong> to calculate your digital exposure score and find hidden gaps in your reach.
+          </p>
+          <div class="text-center">
+            <button id="start-quiz-btn" class="btn-cartoon hover-pop thick-border quiz-start-btn font-space">
+              Start Free Scan &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Quiz State -->
+        <div id="quiz-play" class="hidden">
+          <div class="quiz-progress-wrapper">
+            <div class="quiz-progress-text font-mono">Progress: <span id="current-q-num">1</span>/10</div>
+            <div class="quiz-progress-bar-outer thick-border">
+              <div id="quiz-progress-bar-inner" class="quiz-progress-bar-inner"></div>
+            </div>
+          </div>
+
+          <div id="question-card" class="question-card thick-border">
+            <p id="question-text" class="question-text font-space">Loading question...</p>
+          </div>
+
+          <div class="quiz-choices-container">
+            <button id="quiz-btn-yes" class="btn-cartoon choice-btn yes-choice thick-border font-space">
+              YES ✓
+            </button>
+            <button id="quiz-btn-no" class="btn-cartoon choice-btn no-choice thick-border font-space">
+              NO ✗
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Results View -->
+        <div id="quiz-results" class="hidden">
+          <div class="results-emblem-container">
+            <div id="results-emblem" class="results-emblem">🚨</div>
+          </div>
+          <h4 id="results-category-title" class="results-category font-mono">RED ALERT!</h4>
+          <h3 id="results-title-text" class="results-title font-space">Your Business Needs A Website RIGHT NOW!</h3>
+          
+          <div class="score-display-wrapper">
+            <span class="score-label font-mono">Quiz Score:</span>
+            <span id="score-number" class="score-number font-space">8/10</span>
+          </div>
+
+          <p id="results-paragraph" class="results-text">
+            Every single day without a website is costing you real customers and real money. While you're reading this, someone just Googled your service — and found your competitor instead of you.
+          </p>
+
+          <div class="results-actions">
+            <a id="results-action-btn" href="https://wa.me/917320072782?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20want%20to%20build%20a%20website%20asap." target="_blank" class="btn-cartoon btn-results-cta hover-pop thick-border font-space">
+              Fix This Now &rarr;
+            </a>
+            <button id="restart-quiz-btn" class="btn-cartoon btn-results-retry hover-pop thick-border font-mono">
+              Retry Scan ⟲
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom CTA Container -->
+    <div class="benefits-cta-container thick-border">
+      <h3 class="benefits-cta-heading font-space">Don't Let Your Business <span class="cta-accent-font">Fall Behind.</span></h3>
+      <p class="benefits-cta-subline">
+        Getting online is no longer optional — it's the difference between a business that grows and one that gets left behind.
+      </p>
+      <a href="https://wa.me/917320072782?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="btn-cartoon btn-cta hover-pop thick-border">
+        Get My Website Now &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- --- STATISTICAL GRID SECTION (NEO-BRUTALIST COMIC STYLE) --- -->
+  <section class="stats-section" aria-labelledby="stats-title">
+    <div class="stats-header">
+      <div class="stats-label font-mono">The Numbers Don't Lie</div>
+      <h2 id="stats-title" class="stats-main-heading font-space">
+        Still Thinking If You Need a <span class="highlight-yellow-badge">Website?</span>
+      </h2>
+    </div>
+
+    <!-- The 6 Statistical Boxes Grid -->
+    <div class="stats-grid">
+      
+      <!-- Box 1 -->
+      <div id="stat-card-1" class="stats-box thick-border stat-item">
+        <div class="stat-number font-space" style="color: var(--neon-lime);">📊 81%</div>
+        <div class="stat-desc">of customers research a business online <span style="color: var(--neon-lime); font-weight: bold;">BEFORE visiting or buying</span>.</div>
+        <div class="stat-source font-mono">— Invoca, 2024</div>
+      </div>
+
+      <!-- Box 2 -->
+      <div id="stat-card-2" class="stats-box thick-border stat-item">
+        <div class="stat-number font-space" style="color: var(--neon-cyan);">📊 75%</div>
+        <div class="stat-desc">of people judge a business's <span style="color: var(--neon-cyan); font-weight: bold;">credibility</span> based on its website.</div>
+        <div class="stat-source font-mono">— LinkedIn Research</div>
+      </div>
+
+      <!-- Box 3 -->
+      <div id="stat-card-3" class="stats-box thick-border stat-item">
+        <div class="stat-number font-space" style="color: var(--neon-purple);">📊 2.8x</div>
+        <div class="stat-desc"><span style="color: var(--neon-purple); font-weight: bold;">2.8x more likely to grow revenue</span> — businesses WITH a website vs businesses WITHOUT one.</div>
+        <div class="stat-source font-mono">— Google/Deloitte, 2024</div>
+      </div>
+
+      <!-- Box 4 -->
+      <div id="stat-card-4" class="stats-box thick-border stat-item">
+        <div class="stat-number font-space" style="color: var(--neon-pink);">📊 40%</div>
+        <div class="stat-desc"><span style="color: var(--neon-pink); font-weight: bold;">faster revenue growth</span> for small businesses that have a website.</div>
+        <div class="stat-source font-mono">— Verisign, 2023</div>
+      </div>
+
+      <!-- Box 5 -->
+      <div id="stat-card-5" class="stats-box thick-border stat-item">
+        <div class="stat-number font-space" style="color: var(--neon-orange);">📊 57%</div>
+        <div class="stat-desc">of users <span style="color: var(--neon-orange); font-weight: bold;">won't recommend</span> a business that has a poor or no mobile-friendly website.</div>
+        <div class="stat-source font-mono">— Forbes, 2024</div>
+      </div>
+
+      <!-- Box 6 -->
+      <div id="stat-card-6" class="stats-box thick-border stat-item">
+        <div class="stat-number font-space" style="color: var(--neon-yellow);">📊 44%</div>
+        <div class="stat-desc">of visitors will <span style="color: var(--neon-yellow); font-weight: bold;">LEAVE a website immediately</span> if there's no contact information visible.</div>
+        <div class="stat-source font-mono">— Business Dasher</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --- TESTIMONIALS SECTION (NEO-BRUTALIST COMIC MARQUEE) --- -->
+  <section class="testimonials-section" aria-labelledby="testimonials-title">
+    <div class="testimonials-header">
+      <div class="testimonials-label font-mono">Client Love</div>
+      <h2 id="testimonials-title" class="testimonials-main-heading font-space">
+        What My <span class="highlight-yellow-badge">Clients</span> Say
+      </h2>
+    </div>
+
+    <!-- Infinite horizontal scrolling marquee container -->
+    <div class="testimonials-marquee-container">
+      <div id="testimonials-track" class="testimonials-track">
+        
+        <!-- FIRST SET OF CARDS -->
+        <!-- Card 1 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Pratik delivered exactly what we needed. Our restaurant website looks stunning and we started getting online enquiries within the first week!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Rajesh Kumar</span>
+            <span class="testimonial-biz font-mono">Spice Haven Restaurant</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Bahut hi achi website bani hai. Design ekdum clean aur modern hai. Humare customers bhi website ki bahut tarif karte hain. Shukriya Pratik!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Anita Singh</span>
+            <span class="testimonial-biz font-mono">StyleHub Boutique</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Very professional work. The website was delivered on time and the design is clean and trustworthy — perfect for a healthcare business."</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Dr. Priya Sharma</span>
+            <span class="testimonial-biz font-mono">HealthPlus Clinic</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Pehle socha tha website ki zarurat nahi, lekin ab dekh ke lagta hai pehle hi karwa lena chahiye tha. Bahut badiya kaam kiya Pratik ne!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Vikram Tiwari</span>
+            <span class="testimonial-biz font-mono">PowerFit Gym</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Our coaching center's website has helped us reach more students online. Clean design, easy to navigate, and delivered faster than expected!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Suman Verma</span>
+            <span class="testimonial-biz font-mono">BrightMinds Coaching</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Hamari dukan ki website dekh ke log seriously lete hain ab. Online presence se naye customers bhi aane lage hain. Website ekdum first class hai!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Mohit Agarwal</span>
+            <span class="testimonial-biz font-mono">Fresh Mart Grocery</span>
+          </div>
+        </div>
+
+        <!-- BACKUP SET FOR SEAMLESS LOOPING -->
+        <!-- Card 1 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Pratik delivered exactly what we needed. Our restaurant website looks stunning and we started getting online enquiries within the first week!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Rajesh Kumar</span>
+            <span class="testimonial-biz font-mono">Spice Haven Restaurant</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Bahut hi achi website bani hai. Design ekdum clean aur modern hai. Humare customers bhi website ki bahut tarif karte hain. Shukriya Pratik!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Anita Singh</span>
+            <span class="testimonial-biz font-mono">StyleHub Boutique</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Very professional work. The website was delivered on time and the design is clean and trustworthy — perfect for a healthcare business."</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Dr. Priya Sharma</span>
+            <span class="testimonial-biz font-mono">HealthPlus Clinic</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Pehle socha tha website ki zarurat nahi, lekin ab dekh ke lagta hai pehle hi karwa lena chahiye tha. Bahut badiya kaam kiya Pratik ne!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Vikram Tiwari</span>
+            <span class="testimonial-biz font-mono">PowerFit Gym</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Our coaching center's website has helped us reach more students online. Clean design, easy to navigate, and delivered faster than expected!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Suman Verma</span>
+            <span class="testimonial-biz font-mono">BrightMinds Coaching</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="testimonial-card thick-border">
+          <p class="testimonial-review">"Hamari dukan ki website dekh ke log seriously lete hain ab. Online presence se naye customers bhi aane lage hain. Website ekdum first class hai!"</p>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-client-info">
+            <span class="testimonial-name font-space">Mohit Agarwal</span>
+            <span class="testimonial-biz font-mono">Fresh Mart Grocery</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- NEO-BRUTALIST COMIC FOOTER SECTION --- -->
+  <footer class="footer-section thick-border" aria-labelledby="footer-logo">
+    <div class="footer-container">
+      
+      <!-- Column 1: Brand Info -->
+      <div class="footer-col brand-col">
+        <a href="./index.html" class="logo font-space" id="footer-logo">
+          <span class="logo-main">PRAYOSH</span>
+          <span class="logo-badge">Creations</span>
+        </a>
+        <p class="footer-tagline font-space">"Smart Websites That Drive Business Growth."</p>
+        <p class="footer-bio">helping small businesses get a professional online presence — affordable & fast.</p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col links-col">
+        <h3 class="footer-col-title font-space">Quick Links</h3>
+        <ul class="footer-links-list">
+          <li><a href="./index.html" class="footer-link"><span class="arrow-indicator">→</span> Home</a></li>
+          <li><a href="./services.html" class="footer-link"><span class="arrow-indicator">→</span> Services</a></li>
+          <li><a href="./portfolio.html" class="footer-link"><span class="arrow-indicator">→</span> Portfolio</a></li>
+          <li><a href="./about.html" class="footer-link"><span class="arrow-indicator">→</span> About Us</a></li>
+          <li><a href="./contact.html" class="footer-link"><span class="arrow-indicator">→</span> Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact Info -->
+      <div class="footer-col contact-col">
+        <h3 class="footer-col-title font-space">Get In Touch</h3>
+        <ul class="footer-contact-list font-space">
+          <li>
+            <span class="contact-icon">📍</span>
+            <span class="contact-text">Ranchi, Jharkhand</span>
+          </li>
+          <li>
+            <span class="contact-icon">📩</span>
+            <span class="contact-text">prayoshcreations@gmail.com</span>
+          </li>
+          <li>
+            <span class="contact-icon">📞</span>
+            <span class="contact-text">+91 74796 38555</span>
+          </li>
+          <li>
+            <span class="contact-icon">🕐</span>
+            <span class="contact-text">Mon–Sat, 10am – 7pm</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Separated bottom bar with thin or thick comic border -->
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-container">
+        <p class="copyright-text font-mono">© 2025 Prayosh Creations. All rights reserved.</p>
+        <p class="creator-credit font-mono">Designed & Built by <span class="creator-name">Pratik Prajapati</span></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
