@@ -331,6 +331,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
+      // --- BENEFITS CARD REVEAL ANIMATIONS WITH GSAP ---
+      const benefitCarousel = document.getElementById("benefit-carousel-card");
+      if (benefitCarousel) {
+        gsap.from(benefitCarousel, {
+          scrollTrigger: {
+            trigger: benefitCarousel,
+            start: "top 88%",
+            toggleActions: "play none none none"
+          },
+          y: 50,
+          opacity: 0,
+          scale: 0.95,
+          duration: 0.7,
+          ease: "back.out(1.2)"
+        });
+      }
+
       // --- PROCESS INFOGRAPHIC STEP ANIMATIONS ---
       // Clean, professional reveal animations without bouncy effects
       gsap.from("#process-step-1, #process-step-2, #process-step-3, #process-step-4", {
@@ -450,62 +467,83 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 4000); // Transition/scroll every 4 seconds
     }
 
-    // --- AUTOMATIC SCROLL & FLY-AWAY FOR BENEFITS STACKED DECK ---
-    const benefitsDeck = document.getElementById("benefits-deck");
-    if (benefitsDeck) {
-      let cards = Array.from(benefitsDeck.querySelectorAll(".benefit-card"));
-      let isDeckHovered = false;
-      
-      // Initialize classes
-      function updateCardClasses() {
-        cards.forEach((card, idx) => {
-          // Clean up old stack classes
-          card.classList.remove("card-0", "card-1", "card-2", "card-3", "card-4", "card-5");
-          // Add appropriate stack class
-          card.classList.add(`card-${idx}`);
-        });
-      }
-      
-      updateCardClasses();
-      
-      benefitsDeck.addEventListener("mouseenter", () => { isDeckHovered = true; });
-      benefitsDeck.addEventListener("mouseleave", () => { isDeckHovered = false; });
-      benefitsDeck.addEventListener("touchstart", () => { isDeckHovered = true; });
-      benefitsDeck.addEventListener("touchend", () => { isDeckHovered = false; });
-      
-      let swipeDirectionLeft = true;
-      
-      setInterval(() => {
-        if (isDeckHovered) return;
-        
-        // Pick the top card
-        const topCard = cards[0];
-        if (!topCard) return;
-        
-        // Add flying/slide away animation class
-        const outClass = swipeDirectionLeft ? "animating-out" : "animating-out-right";
-        topCard.classList.add(outClass);
-        swipeDirectionLeft = !swipeDirectionLeft; // Alternate directions for natural organic gameplay feel
-        
-        // Instantly promote cards behind it to their next step in the stack
-        const remainingCards = cards.slice(1);
-        remainingCards.forEach((card, idx) => {
-          card.classList.remove(`card-${idx + 1}`);
-          card.classList.add(`card-${idx}`);
-        });
-        
-        // Wait for slide-out animation, then recycle to the bottom of the stack
+    // --- BENEFITS CARD CAROUSEL (FADING DYNAMIC ENGINE) ---
+    const benefitCard = document.getElementById("benefit-carousel-card");
+    const slides = benefitCard ? Array.from(benefitCard.querySelectorAll(".benefit-slide")) : [];
+    const indicators = benefitCard ? Array.from(benefitCard.querySelectorAll(".indicator")) : [];
+
+    if (benefitCard && slides.length > 0) {
+      let currentIdx = 0;
+      let cycleInterval;
+
+      const cardColors = [
+        "var(--neon-lime)",
+        "var(--neon-cyan)",
+        "var(--neon-purple)",
+        "var(--neon-pink)",
+        "var(--neon-orange)",
+        "var(--neon-yellow)"
+      ];
+
+      const showSlide = (nextIndex) => {
+        if (nextIndex === currentIdx) return;
+
+        const currentSlide = slides[currentIdx];
+        const nextSlide = slides[nextIndex];
+
+        // 1. Update card background color corresponding to the next slide
+        benefitCard.style.backgroundColor = cardColors[nextIndex];
+
+        // 2. Play transition: fade-out current slide gracefully
+        currentSlide.classList.remove("active");
+        currentSlide.classList.add("leaving");
+
+        // Clean up leaving state after transition finishes
         setTimeout(() => {
-          topCard.classList.remove(outClass, "card-0");
-          // Move from front of array to the back
-          cards.shift();
-          cards.push(topCard);
-          
-          // Apply correct deck classes back
-          updateCardClasses();
-        }, 600); // 600ms matches the CSS transition duration
-        
-      }, 5000); // Transition/scroll every 5 seconds
+          currentSlide.classList.remove("leaving");
+        }, 300);
+
+        // 3. Play transition: fade-in / slide-up next slide
+        nextSlide.classList.add("active");
+
+        // 4. Update indicators
+        indicators.forEach((indicator, idx) => {
+          if (idx === nextIndex) {
+            indicator.classList.add("active");
+          } else {
+            indicator.classList.remove("active");
+          }
+        });
+
+        currentIdx = nextIndex;
+      };
+
+      const startAutoCycle = () => {
+        stopAutoCycle(); // Prevent duplicates
+        cycleInterval = setInterval(() => {
+          const nextIdx = (currentIdx + 1) % slides.length;
+          showSlide(nextIdx);
+        }, 5000); // Cycles every 5 seconds
+      };
+
+      const stopAutoCycle = () => {
+        if (cycleInterval) clearInterval(cycleInterval);
+      };
+
+      // Start the cycle on load
+      startAutoCycle();
+
+      // Implement clicking indicators for lightweight interactivity
+      indicators.forEach((indicator, idx) => {
+        indicator.addEventListener("click", () => {
+          showSlide(idx);
+          startAutoCycle(); // Reset interval timer so it stays on the selected slide full duration
+        });
+      });
+
+      // Pause cycle on hover (desktop friendly)
+      benefitCard.addEventListener("mouseenter", stopAutoCycle);
+      benefitCard.addEventListener("mouseleave", startAutoCycle);
     }
 
     // --- WEBSITE READINESS QUIZ SYSTEM ---
@@ -717,5 +755,8 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.getTweensOf(testimonialsTrack).forEach(t => t.resume());
       });
     }
+
+
+
   }
 });

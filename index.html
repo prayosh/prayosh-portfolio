@@ -297,56 +297,56 @@
       </p>
     </div>
 
-    <!-- The 6 Cards Deck Container -->
-    <div class="benefits-deck-container">
-      <div id="benefits-deck" class="benefits-deck">
+    <!-- The 6 Cards Fading Dynamic Carousel Container -->
+    <div class="benefits-carousel-container">
+      <div id="benefit-carousel-card" class="benefit-carousel-card thick-border" style="background-color: var(--neon-lime);">
         
-        <!-- Card 1 -->
-        <div class="benefit-card thick-border" style="background-color: var(--neon-lime);">
-          <div class="benefit-card-content">
+        <div class="benefit-carousel-content" id="benefit-carousel-content">
+          <!-- Slide 1 -->
+          <div class="benefit-slide active" data-index="0">
             <h3 class="benefit-card-title font-space">🔍 90% of customers search online before visiting any shop or clinic.</h3>
             <p class="benefit-card-desc">→ If you're not online, they'll find your competitor — not you.</p>
           </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="benefit-card thick-border" style="background-color: var(--neon-cyan);">
-          <div class="benefit-card-content">
+          
+          <!-- Slide 2 -->
+          <div class="benefit-slide" data-index="1">
             <h3 class="benefit-card-title font-space">📉 No website = No credibility.</h3>
             <p class="benefit-card-desc">→ Today, if a business has no website, customers assume it's either too small or not trustworthy enough to invest in.</p>
           </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="benefit-card thick-border" style="background-color: var(--neon-purple);">
-          <div class="benefit-card-content">
-            <h3 class="benefit-card-title font-space">🕐 Your competitor is already online — and getting YOUR customers.</h3>
+          
+          <!-- Slide 3 -->
+          <div class="benefit-slide" data-index="2">
+            <h3 class="benefit-card-title font-space">🕐 Your competitor is already online—and getting YOUR customers.</h3>
             <p class="benefit-card-desc">→ Every day without a website is a day someone else is taking the business that should have been yours.</p>
           </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="benefit-card thick-border" style="background-color: var(--neon-pink);">
-          <div class="benefit-card-content">
+          
+          <!-- Slide 4 -->
+          <div class="benefit-slide" data-index="3">
             <h3 class="benefit-card-title font-space">📱 People judge a business by its online presence in just 3 seconds.</h3>
             <p class="benefit-card-desc">→ A professional website instantly builds trust — even before they walk in.</p>
           </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="benefit-card thick-border" style="background-color: var(--neon-orange);">
-          <div class="benefit-card-content">
+          
+          <!-- Slide 5 -->
+          <div class="benefit-slide" data-index="4">
             <h3 class="benefit-card-title font-space">💸 Walk-in customers are limited. Online reach is unlimited.</h3>
             <p class="benefit-card-desc">→ A website lets you reach customers across your entire city — not just people passing by your shop.</p>
           </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="benefit-card thick-border" style="background-color: var(--neon-yellow);">
-          <div class="benefit-card-content">
+          
+          <!-- Slide 6 -->
+          <div class="benefit-slide" data-index="5">
             <h3 class="benefit-card-title font-space">📞 Missed calls = Missed business.</h3>
             <p class="benefit-card-desc">→ A website works even when you're busy, closed or unavailable — customers can still find you, contact you and enquire about your services 24/7.</p>
           </div>
+        </div>
+
+        <!-- Dot Indicators -->
+        <div class="benefit-indicators" id="benefit-indicators">
+          <span class="indicator active" data-index="0"></span>
+          <span class="indicator" data-index="1"></span>
+          <span class="indicator" data-index="2"></span>
+          <span class="indicator" data-index="3"></span>
+          <span class="indicator" data-index="4"></span>
+          <span class="indicator" data-index="5"></span>
         </div>
 
       </div>
@@ -497,6 +497,8 @@
 
     </div>
   </section>
+
+
 
   <!-- --- TESTIMONIALS SECTION (NEO-BRUTALIST COMIC MARQUEE) --- -->
   <section class="testimonials-section" aria-labelledby="testimonials-title">
