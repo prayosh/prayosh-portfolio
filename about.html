@@ -6,6 +6,7 @@
   <title>About Us — Prayosh Creations</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./about.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script defer src="./script.js"></script>
 </head>
@@ -31,7 +32,7 @@
       <li><a href="./about.html" class="mobile-nav-link active">About Us</a></li>
       <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
     </ul>
-    <a href="https://wa.me/917320072782?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta text-center justify-center font-mono">
+    <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta text-center justify-center font-mono">
       GET QUOTE <i class="fa-solid fa-fire text-lime-400"></i>
     </a>
   </aside>
@@ -50,7 +51,7 @@
         <li><a href="./about.html" class="nav-link active">About</a></li>
         <li><a href="./contact.html" class="nav-link">Contact</a></li>
       </ul>
-      <a href="https://wa.me/917320072782?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta thin-border">
+      <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta thin-border">
         Get Quote <span class="text-xs">✦</span>
       </a>
       <button id="menu-toggle" class="menu-toggle thin-border" aria-label="Open menu">
@@ -59,17 +60,305 @@
     </nav>
   </header>
 
-  <!-- Coming Soon Interactive Comic Cell -->
-  <main class="coming-soon-wrapper">
-    <div class="coming-soon-box thick-border shadow-cartoon-lg" style="transform: rotate(2deg);">
-      <span class="coming-soon-badge" style="background-color: var(--neon-pink); color: black;">OUR CHRONICLES</span>
-      <h1 class="coming-soon-title" style="color: var(--neon-orange);">About Us</h1>
-      <p class="coming-soon-desc">
-        Learn about Pratik's background, his dedication to elevating local Ranchi small businesses and medical clinics, and the modern, high-speed agency spirit driving Prayosh Creations. We are preparing bios!
-      </p>
-      <a href="./index.html" class="btn-cartoon back-btn hover-pop thick-border">
-        <i class="fa-solid fa-arrow-left"></i> Back to Home
-      </a>
+  <!-- Standalone responsive About Me / Us Page Content -->
+  <main class="about-page-wrapper">
+    <div class="about-container">
+      
+      <!-- Split-Column Row -->
+      <div class="about-split-row">
+        
+        <!-- Left Side: Custom Avatar Box & retro Available Badge -->
+        <div class="about-avatar-column">
+          <div class="about-avatar-box thick-border shadow-cartoon-lg">
+            <!-- Available Badge -->
+            <div class="available-badge font-mono">
+              <span class="blinking-dot"></span> Available for Work
+            </div>
+            
+            <!-- Avatar Graphic (CSS-based vibrant cartoon avatar) -->
+            <div class="cartoon-avatar-illustration">
+              <div class="avatar-back-elements">
+                <div class="avatar-star-badge font-space">✦</div>
+                <div class="avatar-gear-icon"><i class="fa-solid fa-code"></i></div>
+              </div>
+              <div class="avatar-profile-base">
+                <div class="profile-emoji">👨‍💻</div>
+              </div>
+              <div class="avatar-decorations">
+                <span class="decor-tag tag-orange font-mono">WEB DESIGNER</span>
+                <span class="decor-tag tag-cyan font-mono">DEVELOPER</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Clean Intro -->
+        <div class="about-intro-column">
+          <div class="about-header-meta font-mono">WHO IS BEHIND PRAYOSH?</div>
+          <h1 class="about-profile-title font-space">About Me</h1>
+          <h2 class="about-profile-subtitle font-space">I'm <span class="text-lime-accent">Pratik Prajapati</span>, a freelance web designer and custom software craftsman dedicated to converting your online visitors into loyal lifetime customers.</h2>
+          
+          <div class="about-profile-text">
+            <p>
+              Based in Ranchi, Jharkhand, I founded <strong>Prayosh Creations</strong> to bring elite, modern, lightning-fast digital solutions to local businesses, shops, and healthcare clinics. I believe that a website shouldn't just be an "online business card"—it should be your absolute hardest-working salesperson, generating leads and building instant credibility 24 hours a day, 7 days a week.
+            </p>
+            <p>
+              My design philosophy is rooted in bold, eye-catching, high-converting layouts that stand out from the endless ocean of boring, cookie-cutter templates. By blending professional 2D Cartoon and Neo-Brutalist design systems with fast loading times and robust logic, I create digital experiences that grab attention in under 3 seconds.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Website Superpowers Grid Section -->
+      <section class="superpowers-section" aria-labelledby="superpowers-heading">
+        <h3 id="superpowers-heading" class="superpowers-title font-space text-center">My Website Superpowers ⚡</h3>
+        <p class="superpowers-desc text-center">Every digital asset I hand-craft comes armed with 6 essential high-converting features as standard:</p>
+        
+        <div class="superpowers-grid font-space">
+          
+          <!-- Superpower 1 -->
+          <div class="superpower-card thick-border" style="background-color: var(--neon-lime);">
+            <div class="sp-icon">📱</div>
+            <h4 class="sp-title font-space">Mobile-Friendly Design</h4>
+            <p class="sp-text">Over 60% of your customers browse on mobile. Your website will render beautifully and operate flawlessly on every single screen size.</p>
+          </div>
+
+          <!-- Superpower 2 -->
+          <div class="superpower-card thick-border" style="background-color: var(--neon-cyan);">
+            <div class="sp-icon">⚡</div>
+            <h4 class="sp-title font-space">Fast Loading Websites</h4>
+            <p class="sp-text">Slow websites kill conversions. I build lightweight, performance-optimized clean code that starts running in milliseconds.</p>
+          </div>
+
+          <!-- Superpower 3 -->
+          <div class="superpower-card thick-border" style="background-color: var(--neon-purple);">
+            <div class="sp-icon">🎨</div>
+            <h4 class="sp-title font-space">Clean Modern UI</h4>
+            <p class="sp-text">Ditch the boring templates. Get a custom, bold, memorable UI layout engineered to command attention and build immediate brand trust.</p>
+          </div>
+
+          <!-- Superpower 4 -->
+          <div class="superpower-card thick-border" style="background-color: var(--neon-pink);">
+            <div class="sp-icon">🗺️</div>
+            <h4 class="sp-title font-space">Easy To Navigate Design</h4>
+            <p class="sp-text">Help your visitors find information instantly. Clean structures, intuitive pathways, and ultra-logical layouts guarantee a frictionless user journey.</p>
+          </div>
+
+          <!-- Superpower 5 -->
+          <div class="superpower-card thick-border" style="background-color: var(--neon-orange);">
+            <div class="sp-icon">📍</div>
+            <h4 class="sp-title font-space">Google Maps Integration</h4>
+            <p class="sp-text">Make it simple for offline walk-ins to find your exact storefront, office, or clinic location with integrated maps and directions.</p>
+          </div>
+
+          <!-- Superpower 6 (New addition) -->
+          <div id="superpower-card-whatsapp" class="superpower-card thick-border" style="background-color: var(--neon-yellow);">
+            <div class="sp-icon">💬</div>
+            <h4 class="sp-title font-space">WhatsApp Integration</h4>
+            <p class="sp-text">Convert visitors instantly! An integrated chat button allows clients to message you with one tap — fast, familiar, and highly effective for conversions.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FAQ Section Accordion -->
+      <section class="faq-section" id="faq-section">
+        <div class="faq-container">
+          <div class="faq-section-header">
+            <span class="faq-badge">Got Questions?</span>
+            <h2 class="faq-title font-space">Frequently Asked Questions</h2>
+            <p class="faq-subtitle font-space">Everything you need to know before we start working together.</p>
+          </div>
+
+          <div class="faq-accordion-group">
+            <!-- Q1 -->
+            <div class="faq-item" style="--btn-color: var(--neon-lime);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">01</span>
+                  <span class="faq-question-text">How long does it take to build a website?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  It depends on the package you choose. A Starter website is usually ready in 3–5 working days, while a Premium website may take 10–15 working days. I always deliver on time — no delays.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="faq-item" style="--btn-color: var(--neon-cyan);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">02</span>
+                  <span class="faq-question-text">What details do I need to provide?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  Just the basics — your business name, logo (if you have one), your preferred colors, and any text or images you want on the website. Don't worry if you don't have everything — I'll guide you through the whole process.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="faq-item" style="--btn-color: var(--neon-purple);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">03</span>
+                  <span class="faq-question-text">Will my website work on mobile phones?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  Absolutely. Every website I build is fully mobile-responsive and tested on multiple screen sizes — phones, tablets and desktops.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="faq-item" style="--btn-color: var(--neon-pink);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">04</span>
+                  <span class="faq-question-text">Do you offer revisions?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  Yes! I offer up to 3 free revisions so you're completely happy with the final result. Your satisfaction is my priority.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="faq-item" style="--btn-color: var(--neon-orange);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">05</span>
+                  <span class="faq-question-text">How much does a website cost?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  Pricing depends on your requirements and the package you choose. I offer flexible pricing to suit different budgets. Contact me for a free consultation and custom quote — no hidden charges, ever.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="faq-item" style="--btn-color: var(--neon-lime);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">06</span>
+                  <span class="faq-question-text">How do I make payment?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  Simple — 50% advance before starting the work, and the remaining 50% after final delivery. I accept UPI, bank transfer and other online payment methods.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="faq-item" style="--btn-color: var(--neon-cyan);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">07</span>
+                  <span class="faq-question-text">Will I be able to update the website myself?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  For basic text and image updates, I'll guide you on how to do it yourself. For bigger changes, you can always reach out to me — I'm just a WhatsApp message away.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="faq-item" style="--btn-color: var(--neon-purple);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">08</span>
+                  <span class="faq-question-text">Do you provide website hosting and domain?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  Yes! I'll help you set up everything. A free hosting plan is also available which is more than enough for most small businesses — no cost at all. If you need a custom domain, that comes at a small additional cost which you pay directly to the domain provider.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q9 -->
+            <div class="faq-item" style="--btn-color: var(--neon-pink);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">09</span>
+                  <span class="faq-question-text">What if I already have a website but want to redesign it?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  Easy! I'll build a completely new website from scratch with a fresh modern design, and then connect it to your existing domain — so your website address stays the same, only the look becomes brand new.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q10 -->
+            <div class="faq-item" style="--btn-color: var(--neon-orange);">
+              <button class="faq-header-btn" aria-expanded="false">
+                <div class="faq-question-flex">
+                  <span class="faq-qn-num">10</span>
+                  <span class="faq-question-text">How do we communicate during the project?</span>
+                </div>
+                <div class="faq-icon-holder"><i class="fa-solid fa-plus"></i></div>
+              </button>
+              <div class="faq-body-collapse">
+                <div class="faq-answer-inner font-space">
+                  Mainly through WhatsApp — it's quick and convenient. I'll keep you updated at every step so you always know where your project stands.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom FAQ CTA -->
+          <div class="faq-footer-cta thick-border">
+            <p class="faq-footer-text font-space">Still have questions? I'm happy to help!</p>
+            <button id="faq-ama-btn" class="faq-scroll-btn">
+              📩 Ask Me Anything
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom High-Converting Call to Action Box -->
+      <section class="about-cta-container" id="whatsapp-section">
+        <div class="about-cta-box thick-border shadow-cartoon-lg text-center" style="transform: rotate(-0.5deg);">
+          <div class="cta-accent-badge font-mono">LET'S START A PROJECT</div>
+          <h3 class="about-cta-title font-space">Currently available for new projects — let's build something great together!</h3>
+          <p class="about-cta-desc font-space">Ready to turn your local business into a high-converting digital powerhouse? Let’s build a custom web asset that hooks your audience and doubles your sales!</p>
+          
+          <div class="about-cta-chat-container">
+            <input type="text" id="wa-cta-input" placeholder="Type your custom project idea or hello message here..." class="cta-wa-field font-space" aria-label="WhatsApp custom message text">
+            <button id="wa-cta-btn" class="wa-btn thick-border font-space">
+              Let's Chat on WhatsApp <span class="wa-icon-balloon">💬</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 
@@ -135,14 +424,149 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Accordion Functionality with Snappy Cartoon Physics
+      const faqHeaders = document.querySelectorAll(".faq-header-btn");
+      
+      faqHeaders.forEach(header => {
+        header.addEventListener("click", () => {
+          const faqItem = header.parentElement;
+          const isCurrentlyActive = faqItem.classList.contains("active");
+          const bodyCollapse = header.nextElementSibling;
+          
+          // Collapse all other items
+          document.querySelectorAll(".faq-item").forEach(item => {
+            if (item !== faqItem) {
+              item.classList.remove("active");
+              item.querySelector(".faq-body-collapse").style.maxHeight = null;
+              item.querySelector(".faq-header-btn").setAttribute("aria-expanded", "false");
+            }
+          });
+          
+          // Toggle current
+          if (isCurrentlyActive) {
+            faqItem.classList.remove("active");
+            bodyCollapse.style.maxHeight = null;
+            header.setAttribute("aria-expanded", "false");
+          } else {
+            faqItem.classList.add("active");
+            bodyCollapse.style.maxHeight = bodyCollapse.scrollHeight + "px";
+            header.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+
+      // Smooth-scroll button behavior
+      const amaBtn = document.getElementById("faq-ama-btn");
+      if (amaBtn) {
+        amaBtn.addEventListener("click", () => {
+          const target = document.getElementById("whatsapp-section");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "center" });
+            // Highlight/focus the text input with a cool bounce
+            const inputField = document.getElementById("wa-cta-input");
+            if (inputField) {
+              setTimeout(() => {
+                inputField.focus();
+                inputField.style.transform = "scale(1.03)";
+                setTimeout(() => {
+                  inputField.style.transform = "none";
+                }, 180);
+              }, 600);
+            }
+          }
+        });
+      }
+
+      // Bottom CTA WhatsApp Send Action Setup
+      const waCtaBtn = document.getElementById("wa-cta-btn");
+      const waCtaInput = document.getElementById("wa-cta-input");
+      if (waCtaBtn && waCtaInput) {
+        waCtaBtn.addEventListener("click", () => {
+          const userMsg = waCtaInput.value.trim();
+          const finalMsg = userMsg ? userMsg : "Hello Pratik! I saw your About page and want to chat about a project!";
+          window.open(`https://wa.me/917479638555?text=${encodeURIComponent(finalMsg)}`, "_blank");
+        });
+        
+        waCtaInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            waCtaBtn.click();
+          }
+        });
+      }
+
       if (typeof gsap !== 'undefined') {
-        gsap.from(".coming-soon-box", {
-          scale: 0.5,
-          rotate: -10,
+        const tl = gsap.timeline();
+        tl.from(".about-avatar-box", {
+          x: -40,
           opacity: 0,
           duration: 0.8,
-          ease: "back.out(1.6)"
+          ease: "back.out(1.2)"
         });
+        tl.from(".about-intro-column", {
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          ease: "power2.out"
+        }, "-=0.5");
+        
+        // Let's check if ScrollTrigger is available, otherwise fall back to viewport entering check
+        if (gsap.plugins && gsap.plugins.scrollTrigger || window.ScrollTrigger) {
+          gsap.from(".superpower-card", {
+            scrollTrigger: {
+              trigger: ".superpowers-grid",
+              start: "top 88%",
+              toggleActions: "play none none none"
+            },
+            y: 40,
+            opacity: 0,
+            stagger: 0.15,
+            duration: 0.7,
+            ease: "back.out(1.1)"
+          });
+
+          gsap.from(".faq-item", {
+            scrollTrigger: {
+              trigger: ".faq-accordion-group",
+              start: "top 88%",
+              toggleActions: "play none none none"
+            },
+            y: 35,
+            opacity: 0,
+            stagger: 0.08,
+            duration: 0.6,
+            ease: "back.out(1.1)"
+          });
+          
+          gsap.from(".about-cta-box", {
+            scrollTrigger: {
+              trigger: ".about-cta-container",
+              start: "top 88%"
+            },
+            scale: 0.95,
+            opacity: 0,
+            duration: 0.8,
+            ease: "back.out(1.2)"
+          });
+        } else {
+          // Fallback if ScrollTrigger isn't present
+          gsap.from(".superpower-card", {
+            y: 40,
+            opacity: 0,
+            stagger: 0.15,
+            duration: 0.7,
+            ease: "back.out(1.1)",
+            delay: 0.8
+          });
+
+          gsap.from(".faq-item", {
+            y: 35,
+            opacity: 0,
+            stagger: 0.08,
+            duration: 0.6,
+            ease: "back.out(1.1)",
+            delay: 1.1
+          });
+        }
       }
     });
   </script>

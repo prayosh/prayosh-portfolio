@@ -1,0 +1,829 @@
+/* ==========================================================================
+   PRAYOSH CREATIONS - ABOUT PAGE STYLES (2D CARTOON / NEO-BRUTALIST)
+   ========================================================================== */
+
+.about-page-wrapper {
+  padding: 8rem 1.5rem 5rem 1.5rem;
+  background-color: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.about-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.about-split-row {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.about-avatar-column {
+  position: sticky;
+  top: 7rem;
+}
+
+/* Beautiful Cartoon Avatar Box */
+.about-avatar-box {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  background-color: var(--bg-card);
+  padding: 1.2rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 3px solid #000000 !important;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+  overflow: visible;
+}
+
+/* Retro available blinking badge */
+.available-badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: var(--neon-lime);
+  color: #000000;
+  border: 3px solid #000000;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  box-shadow: 4px 4px 0px #000000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+  transform: rotate(3deg);
+  white-space: nowrap;
+}
+
+.blinking-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  animation: badgeBlink 0.9s infinite alternate;
+}
+
+@keyframes badgeBlink {
+  0% { opacity: 0.3; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.15); }
+}
+
+/* Custom CSS illustration for the Avatar */
+.cartoon-avatar-illustration {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background-color: var(--neon-purple);
+  border: 3px solid #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: inset 4px 4px 0px rgba(255, 255, 255, 0.2);
+}
+
+.avatar-back-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.avatar-star-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 1.8rem;
+  color: var(--neon-lime);
+  animation: spinStar 10s infinite linear;
+}
+
+@keyframes spinStar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.avatar-gear-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: var(--neon-cyan);
+  opacity: 0.7;
+}
+
+.avatar-profile-base {
+  z-index: 2;
+  transition: transform 0.25s cubic-bezier(0.18, 0.9, 0.32, 1.25);
+}
+
+.avatar-profile-base .profile-emoji {
+  font-size: 5.5rem;
+  filter: drop-shadow(4px 4px 0px #000000);
+  animation: floatAvatar 3.5s infinite ease-in-out alternate;
+}
+
+@keyframes floatAvatar {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-6px) rotate(1.5deg); }
+}
+
+.about-avatar-box:hover .avatar-profile-base {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.avatar-decorations {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 3;
+}
+
+.decor-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  color: #000000;
+  letter-spacing: 0.03em;
+}
+
+.tag-orange { background-color: var(--neon-orange); }
+.tag-cyan { background-color: var(--neon-cyan); }
+
+/* Right Column: Intro Copy */
+.about-header-meta {
+  color: var(--neon-pink);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.7rem;
+}
+
+.about-profile-title {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.about-profile-subtitle {
+  font-size: 1.3rem;
+  line-height: 1.45;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.text-lime-accent {
+  color: var(--neon-lime);
+}
+
+.about-profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-profile-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.about-profile-text strong {
+  color: #ffffff;
+}
+
+/* Superpowers Section */
+.superpowers-section {
+  border-top: 3px dashed var(--bg-card-header);
+  margin-top: 6rem;
+  padding-top: 5rem;
+  margin-bottom: 6rem;
+}
+
+.superpowers-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.superpowers-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto 3.5rem auto;
+  line-height: 1.5;
+}
+
+.superpowers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.superpower-card {
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  border: 3px solid #000000 !important;
+  color: #000000;
+  box-shadow: 8px 8px 0px #000000;
+  transition: transform 0.25s cubic-bezier(0.18, 0.9, 0.32, 1.25), box-shadow 0.25s ease, background-color 0.2s ease;
+  will-change: transform, box-shadow;
+}
+
+/* Loop Animations with Staggered Deluxe Physics */
+.superpower-card:nth-child(1) {
+  animation: cartoonBobOdd 5.5s ease-in-out infinite alternate;
+  animation-delay: 0s;
+}
+.superpower-card:nth-child(2) {
+  animation: cartoonBobEven 6s ease-in-out infinite alternate;
+  animation-delay: 0.8s;
+}
+.superpower-card:nth-child(3) {
+  animation: cartoonBobOdd 5.8s ease-in-out infinite alternate;
+  animation-delay: 1.6s;
+}
+.superpower-card:nth-child(4) {
+  animation: cartoonBobEven 6.2s ease-in-out infinite alternate;
+  animation-delay: 2.4s;
+}
+.superpower-card:nth-child(5) {
+  animation: cartoonBobOdd 5.6s ease-in-out infinite alternate;
+  animation-delay: 3.2s;
+}
+.superpower-card:nth-child(6) {
+  animation: cartoonBobEven 6.4s ease-in-out infinite alternate;
+  animation-delay: 4s;
+}
+
+.superpower-card:hover {
+  animation: none !important;
+  transform: translate(-10px, -10px) rotate(0.5deg) scale(1.02) !important;
+  box-shadow: 15px 15px 0px #000000 !important;
+  z-index: 15;
+}
+
+/* Custom 2D Cartoon Infinite Bobbing & Swaying Keyframes */
+@keyframes cartoonBobOdd {
+  0% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+}
+
+@keyframes cartoonBobEven {
+  0% {
+    transform: translateY(0) rotate(1.5deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(1.5deg);
+  }
+}
+
+.sp-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.sp-title {
+  font-size: 1.3rem;
+  color: #000000;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.sp-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #000000;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+/* Call to Action Container */
+.about-cta-container {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.about-cta-box {
+  background-color: var(--bg-card);
+  border-radius: 24px;
+  padding: 3.5rem 2.5rem;
+  border: 3px solid #000000 !important;
+  color: var(--text-primary);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.cta-accent-badge {
+  display: inline-block;
+  background-color: #000000;
+  color: var(--neon-cyan);
+  border: 2px solid #000000;
+  padding: 5px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  box-shadow: 3px 3px 0px var(--neon-pink);
+  transform: rotate(-1deg);
+  margin-bottom: 1.5rem;
+}
+
+.about-cta-title {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  max-width: 750px;
+  margin: 0 auto 1.2rem auto;
+  line-height: 1.35;
+}
+
+.about-cta-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+.about-cta-chat-container {
+  display: flex;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.cta-wa-field {
+  flex-grow: 1;
+  background-color: #ffffff;
+  color: #000000;
+  border: 3px solid #000000 !important;
+  border-radius: 16px;
+  padding: 1.1rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  outline: none;
+  box-shadow: 6px 6px 0px #000000;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.cta-wa-field:focus {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.cta-wa-field::placeholder {
+  color: #555555;
+  opacity: 0.8;
+}
+
+/* WhatsApp Juicy CTA Button */
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #25D366; /* WhatsApp Green */
+  color: #000000 !important;
+  padding: 1.1rem 2.5rem;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  border: 3px solid #000000 !important;
+  box-shadow: 6px 6px 0px #000000;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: transform 0.15s cubic-bezier(0.18, 0.9, 0.32, 1.25), box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+
+.wa-btn:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.wa-icon-balloon {
+  font-size: 1.4rem;
+}
+
+/* Responsive Styles for About Page */
+@media (max-width: 992px) {
+  .about-split-row {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  
+  .about-avatar-column {
+    position: static;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .about-page-wrapper {
+    padding: 6.5rem 1rem 4rem 1rem;
+  }
+  
+  .about-profile-title {
+    font-size: 2.6rem;
+  }
+  
+  .about-profile-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .superpowers-title {
+    font-size: 1.8rem;
+  }
+  
+  /* Make superpower cards extra compact on mobile view */
+  .superpowers-grid {
+    gap: 1.25rem;
+  }
+  
+  .superpower-card {
+    padding: 1.4rem 1.2rem !important;
+    border-radius: 14px;
+    box-shadow: 5px 5px 0px #000000;
+  }
+  
+  .sp-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .sp-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .sp-text {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+  
+
+  
+  .about-cta-chat-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .cta-wa-field {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    box-shadow: 4px 4px 0px #000000;
+  }
+
+  .about-cta-box {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .about-cta-title {
+    font-size: 1.4rem;
+  }
+  
+  .wa-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* ==========================================================================
+   PRAYOSH CREATIONS - FAQ SECTION STYLES (2D CARTOON / NEO-BRUTALIST)
+   ========================================================================== */
+
+.faq-section {
+  border-top: 3px dashed var(--bg-card-header);
+  padding: 5rem 1.5rem 6.5rem 1.5rem;
+  background-color: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Section Header Styles */
+.faq-section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.faq-badge {
+  display: inline-block;
+  background-color: var(--neon-cyan);
+  color: #000000 !important;
+  border: 3px solid #000000;
+  padding: 6px 16px;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  box-shadow: 4px 4px 0px #000000;
+  transform: rotate(-1.5deg);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.faq-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.8rem;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.faq-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Accordion Group Layout */
+.faq-accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 4.5rem;
+}
+
+/* Individual Accordion Item */
+.faq-item {
+  background-color: var(--bg-card);
+  border: 3px solid #000000 !important;
+  border-radius: 18px;
+  box-shadow: 6px 6px 0px #000000;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.18, 0.9, 0.32, 1.25), box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.faq-item.active {
+  background-color: var(--bg-card-header);
+  transform: translate(0, 0);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Button Trigger Header */
+.faq-header-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.35rem 1.75rem;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Question Content layout */
+.faq-question-flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-qn-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 0.9rem;
+  background-color: var(--btn-color, var(--neon-lime));
+  color: #000000;
+  border: 2px solid #000000;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0px #000000;
+  flex-shrink: 0;
+  transform: rotate(-3deg);
+}
+
+.faq-item:nth-child(even) .faq-qn-num {
+  transform: rotate(3deg);
+}
+
+.faq-question-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* Accordion toggle icon box */
+.faq-icon-holder {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  transition: transform 0.28s cubic-bezier(0.18, 0.9, 0.32, 1.25), background-color 0.15s ease, color 0.15s ease;
+}
+
+.faq-item:hover .faq-icon-holder {
+  background-color: var(--neon-lime);
+  color: #000000;
+}
+
+/* Rotated state when active */
+.faq-item.active .faq-icon-holder {
+  transform: rotate(45deg);
+  background-color: var(--neon-pink);
+  color: #000000;
+}
+
+/* Expandable content area */
+.faq-body-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer-inner {
+  padding: 0 1.75rem 1.6rem 3.75rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* Bottom CTA section inside FAQ */
+.faq-footer-cta {
+  text-align: center;
+  background-color: var(--bg-card);
+  border: 3px solid #000000 !important;
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+  box-shadow: var(--shadow-md);
+  transform: rotate(0.4deg);
+}
+
+.faq-footer-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.faq-scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--neon-lime);
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+  padding: 0.9rem 2.2rem;
+  border-radius: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #000000;
+  transition: transform 0.15s cubic-bezier(0.18, 0.9, 0.32, 1.25), box-shadow 0.15s ease;
+  user-select: none;
+  text-decoration: none;
+}
+
+.faq-scroll-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.faq-scroll-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN FOR FAQ
+   ========================================================================== */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 3.5rem 1rem 5rem 1rem;
+  }
+
+  .faq-title {
+    font-size: 2rem;
+  }
+
+  .faq-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .faq-accordion-group {
+    gap: 1rem;
+  }
+
+  .faq-header-btn {
+    padding: 1rem 1.2rem;
+  }
+
+  .faq-question-text {
+    font-size: 1rem;
+  }
+
+  .faq-qn-num {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .faq-icon-holder {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .faq-answer-inner {
+    padding: 0 1.2rem 1.2rem 3.1rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .faq-footer-cta {
+    padding: 2rem 1.25rem;
+    border-radius: 18px;
+  }
+
+  .faq-footer-text {
+    font-size: 1.15rem;
+  }
+
+  .faq-scroll-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.98rem;
+  }
+}

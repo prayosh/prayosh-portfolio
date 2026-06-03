@@ -685,7 +685,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (resultsActionBtn) {
             resultsActionBtn.textContent = "See How I Can Help →";
             resultsActionBtn.className = "btn-cartoon btn-results-cta hover-pop thick-border font-space btn-green-style";
-            resultsActionBtn.href = `https://wa.me/917320072782?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20score%20of%20${quizScore}/10.%20I'd%20love%20to%20see%20how%20you%20can%20help!`;
+            resultsActionBtn.href = `https://wa.me/917479638555?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20score%20of%20${quizScore}/10.%20I%27d%20love%20to%20see%20how%20you%20can%20help!`;
           }
         } else if (quizScore <= 6) {
           if (resultsEmblem) resultsEmblem.textContent = "⚠️";
@@ -700,7 +700,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (resultsActionBtn) {
             resultsActionBtn.textContent = "Fix This Now →";
             resultsActionBtn.className = "btn-cartoon btn-results-cta hover-pop thick-border font-space btn-orange-style";
-            resultsActionBtn.href = `https://wa.me/917320072782?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20score%20of%20${quizScore}/10.%20I%20want%20to%20fix%20this%20asap!`;
+            resultsActionBtn.href = `https://wa.me/917479638555?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20score%20of%20${quizScore}/10.%20I%20want%20to%20fix%20this%20asap!`;
           }
         } else {
           if (resultsEmblem) resultsEmblem.textContent = "🚨";
@@ -715,7 +715,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (resultsActionBtn) {
             resultsActionBtn.textContent = "Fix This Now →";
             resultsActionBtn.className = "btn-cartoon btn-results-cta hover-pop thick-border font-space btn-pink-style";
-            resultsActionBtn.href = `https://wa.me/917320072782?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20Red%20Alert%20score%20of%20${quizScore}/10.%20I%20need%20a%20website%20right%20now!`;
+            resultsActionBtn.href = `https://wa.me/917479638555?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20Red%20Alert%20score%20of%20${quizScore}/10.%20I%20need%20a%20website%20right%20now!`;
           }
         }
       }
