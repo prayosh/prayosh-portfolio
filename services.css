@@ -1,0 +1,536 @@
+/* ==========================================================================
+   PRAYOSH CREATIONS - SERVICE PACKAGES STYLES (2D CARTOON / NEO-BRUTALIST)
+   ========================================================================== */
+
+.packages-page-wrapper {
+  padding: 4.5rem 1.5rem 3.5rem 1.5rem;
+  background-color: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.packages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page Header */
+.packages-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.packages-badge {
+  display: inline-block;
+  background-color: var(--neon-purple);
+  color: #000000 !important;
+  border: 3px solid #000000;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  box-shadow: 4px 4px 0px #000000;
+  transform: rotate(-1.5deg);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.packages-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.packages-title-highlight {
+  display: inline-block;
+  background-color: var(--neon-lime);
+  color: #000000 !important;
+  border: 3px solid #000000;
+  padding: 0px 14px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px #000000;
+  transform: rotate(-1.5deg);
+  font-weight: 800;
+}
+
+.packages-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 2x2 Grid Layout for Packages */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem;
+  margin-bottom: 2.5rem;
+  perspective: 1000px; /* Enable structural perspective for 3D tilts */
+}
+
+/* Base Card Style */
+.package-card {
+  border: 3px solid #000000 !important;
+  border-radius: 20px;
+  padding: 1.8rem 1.6rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  position: relative;
+  background-color: var(--bg-card); /* Cohesive Midnight Premium Dark */
+  color: var(--text-primary); /* Ultra high contrast white/light-grey */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              background-color 0.3s ease;
+  will-change: transform, box-shadow;
+  overflow: visible;
+}
+
+/* --- COHESIVE PREMIUM DARK THEME CARDS --- */
+.card-starter {
+  box-shadow: 10px 10px 0px var(--neon-purple); /* Signature contrast-popping shadow */
+}
+.card-starter:hover {
+  box-shadow: 14px 14px 0px var(--neon-pink) !important;
+}
+
+.card-essential {
+  box-shadow: 10px 10px 0px var(--neon-cyan);
+}
+.card-essential:hover {
+  box-shadow: 14px 14px 0px var(--neon-yellow) !important;
+}
+
+.card-standard {
+  box-shadow: 10px 10px 0px var(--neon-orange);
+}
+.card-standard:hover {
+  box-shadow: 14px 14px 0px var(--neon-lime) !important;
+}
+
+.card-premium {
+  box-shadow: 12px 12px 0px var(--neon-lime); /* Contrast-popping neon shadow for best-featured ultimate package! */
+}
+.card-premium:hover {
+  box-shadow: 16px 16px 0px var(--neon-cyan) !important;
+}
+
+/* Custom Highlights for Single Page vs Multi Page offerings */
+.highlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 2px 2px 0px #000000;
+  transform: rotate(-1deg);
+  text-transform: uppercase;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.hl-single-page {
+  background-color: var(--neon-cyan);
+  color: #000000 !important;
+}
+
+.hl-multi-page {
+  background-color: var(--neon-pink);
+  color: #000000 !important;
+}
+
+/* 3D Static Organic Tilts for natural layout aesthetic */
+.package-card.tilt-left-up {
+  transform: rotate(-0.8deg) translateY(0);
+}
+
+.package-card.tilt-right-up {
+  transform: rotate(0.6deg) translateY(0);
+}
+
+.package-card.tilt-left-down {
+  transform: rotate(0.4deg) translateY(0);
+}
+
+.package-card.tilt-right-down {
+  transform: rotate(-0.6deg) translateY(0);
+}
+
+/* Hover States: Smoothly straighten up, lift up, deepen shadows */
+.package-card:hover {
+  transform: rotate(0deg) translateY(-3px) scale(1.005) !important;
+  z-index: 10;
+  background-color: #161622; /* Subtle dark glow highlight */
+}
+
+/* Premium Crown Highlight Accent Badge */
+.premium-glow-badge {
+  position: absolute;
+  top: -18px;
+  right: 25px;
+  background-color: var(--neon-lime);
+  color: #000000;
+  border: 3px solid #000000;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  box-shadow: 4px 4px 0px #000000;
+  transform: rotate(4deg);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+}
+
+/* Card Content Details & Cohesive Tighter Typography */
+.card-header-group {
+  margin-bottom: 1.2rem;
+}
+
+.package-badge-bubble {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 0.82rem; /* Compact badge */
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 2px solid #000000;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.badge-purple { background-color: var(--neon-purple); color: #000000; }
+.badge-cyan { background-color: var(--neon-cyan); color: #000000; }
+.badge-orange { background-color: var(--neon-orange); color: #000000; }
+.badge-pink { background-color: var(--neon-pink); color: #000000; }
+
+.card-main-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem; /* Reduced to look beautiful and not bloated */
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+  color: #ffffff;
+}
+
+.card-best-for {
+  font-size: 0.94rem; /* Balanced size */
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #E4E4E7;
+}
+
+.card-best-label {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.8rem; /* Balanced size */
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--neon-cyan); /* Highlight best tag prominently */
+}
+
+/* Feature Checklist */
+.card-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Tighter gap */
+  margin-bottom: 1.8rem; /* Tighter margin */
+}
+
+.feature-item {
+  padding-bottom: 0.6rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 1.02rem; /* Tighter elegant readability */
+  line-height: 1.4;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1) !important;
+  color: #D4D4D8 !important;
+}
+
+.feature-check-icon {
+  font-size: 1.1rem; /* Proportional icon */
+  color: var(--neon-lime);
+  text-shadow: 1px 1px 0px #000000;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* WhatsApp Cartoon Action CTA Buttons */
+.card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0.95rem 1.5rem; /* Proportional padding */
+  border: 3px solid #000000 !important;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1.08rem; /* Proportional CTA Text */
+  color: #000000 !important;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s cubic-bezier(0.18, 0.9, 0.32, 1.25), box-shadow 0.15s ease;
+  user-select: none;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.btn-lime {
+  background-color: var(--neon-lime);
+}
+
+.btn-cyan {
+  background-color: var(--neon-cyan);
+}
+
+.btn-orange {
+  background-color: var(--neon-orange);
+}
+
+.btn-pink {
+  background-color: var(--neon-pink);
+}
+
+.card-action-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.card-action-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+/* Bottom Visual Showcase Banner / Trust Anchor */
+.packages-footer-promo {
+  background-color: var(--bg-card);
+  border: 3px solid #000000 !important;
+  border-radius: 24px;
+  padding: 3.5rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  box-shadow: var(--shadow-md);
+  margin-top: 2rem;
+}
+
+.promo-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.promo-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.promo-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.promo-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--bg-card-header);
+  border: 2px solid #000000;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.promo-badge-icon {
+  font-size: 1.2rem;
+}
+
+/* --- BOTTOM HIGH-CONVERTING CTA SECTION --- */
+.bottom-cta-section {
+  text-align: center;
+  background-color: var(--bg-card); /* Midnight carbon dark */
+  border: 3px solid #000000 !important;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 3.5rem 0 2rem 0;
+  box-shadow: 8px 8px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.02) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+.bottom-cta-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem; /* nice bold and large */
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+.bottom-cta-subtitle {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.bottom-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 1.1rem 2.5rem;
+  border: 3px solid #000000 !important;
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem; /* highly prominent and readable */
+  color: #000000 !important;
+  background-color: #facc15; /* Bright Vibrant Yellow accent background */
+  box-shadow: 6px 6px 0px #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+  user-select: none;
+}
+
+.bottom-cta-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px #000000;
+  background-color: var(--neon-lime); /* Switch to neon-lime color on hover */
+}
+
+.bottom-cta-btn:active {
+  transform: translate(6px, 6px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .packages-grid {
+    grid-template-columns: 1fr; /* Stack vertically on medium screens and below */
+    gap: 3rem;
+  }
+  
+  .package-card {
+    transform: none !important; /* Disable extreme tilts on mobile layouts for cleanliness */
+    max-width: 620px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2.2rem 1.8rem;
+  }
+  
+  .packages-title {
+    font-size: 2.6rem;
+  }
+  
+  .packages-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .packages-page-wrapper {
+    padding: 6.5rem 1rem 4rem 1rem;
+  }
+  
+  .packages-title {
+    font-size: 2.1rem;
+  }
+  
+  .card-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .packages-footer-promo {
+    padding: 2.2rem 1.25rem;
+    border-radius: 18px;
+  }
+  
+  .promo-title {
+    font-size: 1.4rem;
+  }
+  
+  .promo-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .promo-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .promo-badge-item {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bottom-cta-section {
+    padding: 2.2rem 1.25rem;
+    border-radius: 18px;
+    margin-top: 2rem;
+  }
+
+  .bottom-cta-title {
+    font-size: 1.55rem;
+  }
+
+  .bottom-cta-subtitle {
+    font-size: 0.98rem;
+    line-height: 1.45;
+    margin-bottom: 1.5rem;
+  }
+
+  .bottom-cta-btn {
+    width: 100%;
+    padding: 0.95rem 1.5rem;
+    font-size: 1.12rem;
+  }
+}

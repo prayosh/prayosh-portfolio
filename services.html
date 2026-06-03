@@ -6,6 +6,7 @@
   <title>Services — Prayosh Creations</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./services.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script defer src="./script.js"></script>
 </head>
@@ -59,17 +60,151 @@
     </nav>
   </header>
 
-  <!-- Coming Soon Interactive Comic Cell -->
-  <main class="coming-soon-wrapper">
-    <div class="coming-soon-box thick-border shadow-cartoon-lg">
-      <span class="coming-soon-badge">EXPERTISE DEPLOYMENT</span>
-      <h1 class="coming-soon-title">Our Services</h1>
-      <p class="coming-soon-desc">
-        Pratik is currently architecting elite specialized services panels including booking grids for dental clinics, digital restaurant order menus, local boutique showcase feeds, and fast-rendering gym portfolio funnels. Stay tuned!
-      </p>
-      <a href="./index.html" class="btn-cartoon back-btn hover-pop thick-border">
-        <i class="fa-solid fa-arrow-left"></i> Back to Home
-      </a>
+  <!-- Service Packages Interactive Exhibition -->
+  <main class="packages-page-wrapper">
+    <div class="packages-container">
+      
+      <!-- Section Header -->
+      <header class="packages-header">
+        <span class="packages-badge">EXPERTISE DEPLOYMENT</span>
+        <h1 class="packages-title">Our Service <span class="packages-title-highlight">Packages</span></h1>
+        <p class="packages-subtitle font-space">
+          Choose a tailored package to elevate your business online. Hand-crafted layouts with rapid load times and premium WhatsApp setups.
+        </p>
+      </header>
+
+      <!-- 2x2 Interactive Packages Grid -->
+      <div class="packages-grid">
+        
+        <!-- Package 1: Starter -->
+        <div class="package-card card-starter tilt-left-up">
+          <div class="card-header-group">
+            <span class="package-badge-bubble badge-purple">Package 1 — Starter</span>
+            <span class="highlight-badge hl-single-page">Single Page · Simple</span>
+            <h3 class="card-main-title font-space">Starter Pack</h3>
+            <span class="card-best-label font-mono">Best For:</span>
+            <p class="card-best-for">Newly started businesses, small shops, home-based services</p>
+          </div>
+          <ul class="card-features-list">
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Single page website</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Clean & minimal design</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> No animations or effects</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Contact form integration</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> WhatsApp button</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Mobile responsive</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Fast loading</li>
+          </ul>
+          <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%20interested%20in%20the%20Package%201%20%E2%80%94%20Starter%20website%20for%20my%20business." target="_blank" class="card-action-btn btn-lime font-space">
+            Choose Starter Package <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <!-- Package 2: Essential -->
+        <div class="package-card card-essential tilt-right-up">
+          <div class="card-header-group">
+            <span class="package-badge-bubble badge-cyan">🥈 Package 2 — Essential</span>
+            <span class="highlight-badge hl-single-page">Single Page · Modern</span>
+            <h3 class="card-main-title font-space">Essential Pack</h3>
+            <span class="card-best-label font-mono">Best For:</span>
+            <p class="card-best-for">Restaurants, salons, clinics, boutiques who want to impress</p>
+          </div>
+          <ul class="card-features-list">
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Single page website</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Modern & stylish design</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Smooth animations & scroll effects</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Google Maps integration</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Contact form integration</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> WhatsApp button with pre-written message</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Gallery section</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Mobile responsive</li>
+          </ul>
+          <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%20interested%20in%20Package%202%20%E2%80%94%20Essential%20single%20page%20modern%20website%20for%20my%20brand." target="_blank" class="card-action-btn btn-cyan font-space">
+            Choose Essential Package <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <!-- Package 3: Standard -->
+        <div class="package-card card-standard tilt-left-down">
+          <div class="card-header-group">
+            <span class="package-badge-bubble badge-orange">🥇 Package 3 — Standard</span>
+            <span class="highlight-badge hl-multi-page">Multi Page · Simple</span>
+            <h3 class="card-main-title font-space">Standard Pack</h3>
+            <span class="card-best-label font-mono">Best For:</span>
+            <p class="card-best-for">Established businesses who need multiple pages & useful tools</p>
+          </div>
+          <ul class="card-features-list">
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Multi page website</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Clean & professional design</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Business-specific tools/calculators (EMI calculator for real estate, appointment booking for clinics, menu page for restaurants, etc.)</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Contact form integration</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> WhatsApp button with pre-written message</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Mobile responsive</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Fast loading</li>
+          </ul>
+          <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%20interested%20in%20Package%203%20%E2%80%94%20Standard%20multi%20page%20website%20with%20custom%20tools/calculators." target="_blank" class="card-action-btn btn-orange font-space">
+            Choose Standard Package <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <!-- Package 4: Premium (Stand Out Dark Card) -->
+        <div class="package-card card-premium tilt-right-down">
+          <span class="premium-glow-badge">👑 Ultimate Pack</span>
+          <div class="card-header-group">
+            <span class="package-badge-bubble badge-pink">👑 Package 4 — Premium</span>
+            <span class="highlight-badge hl-multi-page">Multi Page · Full Featured</span>
+            <h3 class="card-main-title font-space text-white">Premium Pack</h3>
+            <span class="card-best-label font-mono">Best For:</span>
+            <p class="card-best-for">Businesses who want a complete professional online presence</p>
+          </div>
+          <ul class="card-features-list">
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Multi page website (upto 7 pages)</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Advanced animations & visual effects</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Google Maps integration</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Business-specific tools/calculators</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Gallery/portfolio section</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Contact form integration</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> WhatsApp button with pre-written message</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Mobile responsive</li>
+            <li class="feature-item"><span class="feature-check-icon">✓</span> Fast loading</li>
+          </ul>
+          <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%20highly%20interested%20in%20the%20Package%204%20%E2%80%94%20Premium%20multi%20page%20full%20featured%20website%20for%20my%20business." target="_blank" class="card-action-btn btn-pink font-space">
+            Choose Premium Package <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA Section -->
+      <div class="bottom-cta-section thick-border shadow-cartoon-sm" id="bottom-cta">
+        <h2 class="bottom-cta-title font-space">Pricing depends on your business needs.</h2>
+        <p class="bottom-cta-subtitle font-space">Contact me for a free consultation & custom quote.</p>
+        <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%20interested%20in%20a%20free%20consultation%20and%20custom%2520quote%20for%20my%2520business." target="_blank" class="bottom-cta-btn font-space" id="services-get-quote">
+          Get Free Quote <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <!-- Trust Badges Promo row at the bottom -->
+      <div class="packages-footer-promo font-space">
+        <h4 class="promo-title">Every Website Includes Our Signature Quality</h4>
+        <p class="promo-desc">
+          Regardless of your choice, every single build designed by Pratik Prajapati comes standard with blazing-fast native core optimizations, high contrast readability controls, and modular structure.
+        </p>
+        <div class="promo-grid font-space">
+          <div class="promo-badge-item">
+            <span class="promo-badge-icon">⚡</span>
+            <span>Ultra Fast Speed Score</span>
+          </div>
+          <div class="promo-badge-item">
+            <span class="promo-badge-icon">📱</span>
+            <span>Fluid Responsive Breakpoints</span>
+          </div>
+          <div class="promo-badge-item">
+            <span class="promo-badge-icon">🔒</span>
+            <span>Secure Form Assets</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -100,7 +235,7 @@
       </div>
 
       <!-- Column 3: Contact Info -->
-      <div class="footer-col contact-col">
+      <div class="footer-col contact-col" id="footer-contact">
         <h3 class="footer-col-title font-space">Get In Touch</h3>
         <ul class="footer-contact-list font-space">
           <li>
@@ -127,7 +262,7 @@
     <!-- Separated bottom bar with thin or thick comic border -->
     <div class="footer-bottom-bar">
       <div class="footer-bottom-container">
-        <p class="copyright-text font-mono">© 2025 Prayosh Creations. All rights reserved.</p>
+        <p class="copyright-text font-mono">© 2026 Prayosh Creations. All rights reserved.</p>
         <p class="creator-credit font-mono">Designed & Built by <span class="creator-name">Pratik Prajapati</span></p>
       </div>
     </div>
@@ -136,12 +271,56 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       if (typeof gsap !== 'undefined') {
-        gsap.from(".coming-soon-box", {
-          scale: 0.5,
-          rotate: -10,
+        // Staggered entry for title and description
+        gsap.from(".packages-header > *", {
+          y: 45,
           opacity: 0,
           duration: 0.8,
-          ease: "back.out(1.6)"
+          stagger: 0.15,
+          ease: "power2.out"
+        });
+        // Spring bounce stagger for cards
+        gsap.from(".package-card", {
+          scale: 0.82,
+          y: 40,
+          opacity: 0,
+          duration: 0.9,
+          stagger: 0.14,
+          ease: "back.out(1.2)",
+          delay: 0.2
+        });
+        // Bottom CTA fade-up
+        gsap.from("#bottom-cta", {
+          y: 50,
+          opacity: 0,
+          duration: 0.9,
+          ease: "back.out(1.15)",
+          delay: 0.5
+        });
+        // Footer promo banner fade up
+        gsap.from(".packages-footer-promo", {
+          y: 60,
+          opacity: 0,
+          duration: 0.9,
+          ease: "back.out(1.1)",
+          delay: 0.65
+        });
+      }
+
+      // Smooth scroll for Bottom CTA Button
+      const btmCtaBtn = document.getElementById("services-get-quote");
+      if (btmCtaBtn) {
+        btmCtaBtn.addEventListener("click", (e) => {
+          const footerContact = document.getElementById("footer-contact");
+          if (footerContact) {
+            e.preventDefault();
+            // smooth-scroll straight to footer contact info
+            footerContact.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // trigger WhatsApp in a new tab after 600ms
+            setTimeout(() => {
+              window.open(btmCtaBtn.href, '_blank', 'noopener,noreferrer');
+            }, 650);
+          }
         });
       }
     });
