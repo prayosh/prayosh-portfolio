@@ -160,6 +160,22 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
+.logo-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: var(--neon-lime);
+  box-shadow: 2px 2px 0px #000000;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.1) rotate(6deg);
+}
+
 .logo-main {
   color: var(--text-primary);
 }
@@ -349,7 +365,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   padding: 1.5rem 1.5rem 4rem 1.5rem;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 3rem;
   align-items: center;
   position: relative;
@@ -540,8 +556,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Massive 2D Retro Window representation */
 .retro-window {
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 550px;
   height: 380px;
   background-color: var(--bg-card);
   border-radius: 18px;
@@ -944,8 +960,8 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .retro-window {
-    height: 320px;
-    width: 85%;
+    height: 300px;
+    width: 95%;
   }
   
   .sticker-ranchi {
@@ -960,6 +976,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .hero-title-group h1 {
     font-size: 1.85rem;
+  }
+  
+  .retro-window {
+    height: 240px;
   }
   
   .speech-bubble-text {

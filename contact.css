@@ -10,7 +10,7 @@
 }
 
 .contact-container {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -85,7 +85,7 @@
   overflow: hidden;
   box-shadow: 8px 8px 0px #000000;
   width: 100%;
-  max-width: 850px;
+  max-width: 760px;
 }
 
 .card-neon-strip {
@@ -222,7 +222,7 @@ a.detail-value:hover {
   position: relative;
   box-shadow: 8px 8px 0px #000000;
   width: 100%;
-  max-width: 850px;
+  max-width: 760px;
 }
 
 .form-card-title {
@@ -508,3 +508,182 @@ a.detail-value:hover {
     font-size: 1.05rem;
   }
 }
+
+/* ==========================================================================
+   BUSINESS GROWTH AUDIT QUIZ STYLING
+   ========================================================================== */
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.audit-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.audit-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1a1a24;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              border-color 0.2s ease, 
+              background-color 0.2s ease, 
+              box-shadow 0.2s ease;
+  user-select: none;
+  position: relative;
+}
+
+.audit-item:hover {
+  border-color: var(--neon-purple);
+  transform: translateX(4px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.audit-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.audit-checkbox-custom {
+  height: 24px;
+  width: 24px;
+  background-color: #0c0c10;
+  border: 3px solid #000000;
+  border-radius: 6px;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.audit-checkbox:checked ~ .audit-checkbox-custom {
+  background-color: var(--neon-lime);
+  border-color: #000000;
+}
+
+.audit-checkbox:checked ~ .audit-checkbox-custom::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid #000000;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.audit-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color 0.15s ease;
+  line-height: 1.4;
+}
+
+/* Checked Item Micro-interactions */
+.audit-item-checked {
+  border-color: var(--neon-lime) !important;
+  transform: translateX(10px) !important;
+  box-shadow: 4px 4px 0px #000000;
+  background-color: #162c1d !important; /* Elegant dark forest green tint */
+}
+
+.audit-item-checked .audit-text {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* Real-Time Scoreboard styling */
+.scoreboard-card {
+  border: 3px solid #000000 !important;
+  border-radius: 16px;
+  padding: 1.8rem;
+  margin-top: 1.5rem;
+  box-shadow: 6px 6px 0px #000000;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+              color 0.3s ease;
+  color: #000000 !important;
+}
+
+.scoreboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.score-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.score-badge {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 4px 12px;
+  border: 3px solid #000000;
+  border-radius: 30px;
+  box-shadow: 2px 2px 0px #000000;
+  background-color: #ffffff;
+}
+
+.score-display-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.score-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.score-max {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  opacity: 0.8;
+}
+
+.score-feedback {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Brackets transition classes for backgrounds */
+.bg-tier-red {
+  background-color: #ff5252 !important; /* Vibrant high contrast red */
+}
+
+.bg-tier-orange {
+  background-color: #ffb129 !important; /* Vibrant high-contrast Orange/Yellow */
+}
+
+.bg-tier-green {
+  background-color: #00e676 !important; /* Vibrant high contrast green */
+}
+

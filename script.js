@@ -523,7 +523,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cycleInterval = setInterval(() => {
           const nextIdx = (currentIdx + 1) % slides.length;
           showSlide(nextIdx);
-        }, 5000); // Cycles every 5 seconds
+        }, 7000); // Cycles every 7 seconds
       };
 
       const stopAutoCycle = () => {
@@ -549,43 +549,43 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- WEBSITE READINESS QUIZ SYSTEM ---
     const quizQuestions = [
       {
-        text: "Does your business currently have a website?",
-        pointsForYes: 0
-      },
-      {
-        text: "Can customers find your business on Google by searching your business name?",
-        pointsForYes: 0
-      },
-      {
-        text: "Are your competitors showing up on Google and you're not?",
+        text: "My business has a website",
         pointsForYes: 1
       },
       {
-        text: "Do customers ever ask you — \"Do you have a website?\" or \"Where can I see your work online?\"",
+        text: "Customers can find me on Google",
         pointsForYes: 1
       },
       {
-        text: "Do you rely only on word-of-mouth or walk-in customers to grow your business?",
+        text: "I get online enquiries regularly",
         pointsForYes: 1
       },
       {
-        text: "Is your business listed on Google Maps with photos, timings & contact details?",
-        pointsForYes: 0
-      },
-      {
-        text: "Can customers contact you or enquire about your services at midnight — without calling you?",
-        pointsForYes: 0
-      },
-      {
-        text: "Do you find it hard to explain your services, pricing or work to new customers every time?",
+        text: "My business information is available 24/7",
         pointsForYes: 1
       },
       {
-        text: "Have you ever lost a customer because they couldn't find information about your business online?",
+        text: "I look more professional than my competitors",
         pointsForYes: 1
       },
       {
-        text: "Do you want your business to grow beyond your local area and reach more customers?",
+        text: "My business is listed on Google Maps",
+        pointsForYes: 1
+      },
+      {
+        text: "Customers can see my work or services online",
+        pointsForYes: 1
+      },
+      {
+        text: "I have more reach than just my local area",
+        pointsForYes: 1
+      },
+      {
+        text: "New customers can contact me without calling",
+        pointsForYes: 1
+      },
+      {
+        text: "My business grows without me being present",
         pointsForYes: 1
       }
     ];
@@ -612,6 +612,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultsParagraph = document.getElementById("results-paragraph");
     const resultsActionBtn = document.getElementById("results-action-btn");
     const restartQuizBtn = document.getElementById("restart-quiz-btn");
+    const quizLiveScoreVal = document.getElementById("quiz-live-score-val");
 
     if (startQuizBtn && quizIntro && quizPlay && quizResults) {
       startQuizBtn.addEventListener("click", () => {
@@ -619,6 +620,9 @@ document.addEventListener("DOMContentLoaded", () => {
         quizPlay.classList.remove("hidden");
         currentQuestionIdx = 0;
         quizScore = 0;
+        if (quizLiveScoreVal) {
+          quizLiveScoreVal.textContent = "0";
+        }
         showQuestion();
       });
 
@@ -652,6 +656,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (answeredYes) {
           quizScore += 1;
         }
+        if (quizLiveScoreVal) {
+          quizLiveScoreVal.textContent = quizScore;
+        }
 
         currentQuestionIdx++;
         showQuestion();
@@ -673,29 +680,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         
         if (quizScore <= 3) {
-          if (resultsEmblem) resultsEmblem.textContent = "👍";
+          if (resultsEmblem) resultsEmblem.textContent = "🚨";
           if (resultsCategoryTitle) {
-            resultsCategoryTitle.textContent = "You're doing okay!";
-            resultsCategoryTitle.style.color = "var(--neon-lime)";
+            resultsCategoryTitle.textContent = "🚨 Red Alert";
+            resultsCategoryTitle.style.color = "#ff5252";
           }
-          if (resultsTitleText) resultsTitleText.textContent = "Not Bad — But You Could Do Better!";
+          if (resultsTitleText) resultsTitleText.textContent = "Invisible Online!";
           if (resultsParagraph) {
-            resultsParagraph.textContent = "Your business has some online presence, but there's still a lot of opportunity you're missing out on. A professional website could take your business to the next level.";
+            resultsParagraph.textContent = "Your business is practically invisible online! Competitors are stealing your potential customers every single day. You urgently need a professional website to stake your claim and build trust.";
           }
           if (resultsActionBtn) {
-            resultsActionBtn.textContent = "See How I Can Help →";
-            resultsActionBtn.className = "btn-cartoon btn-results-cta hover-pop thick-border font-space btn-green-style";
-            resultsActionBtn.href = `https://wa.me/917479638555?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20score%20of%20${quizScore}/10.%20I%27d%20love%20to%20see%20how%20you%20can%20help!`;
+            resultsActionBtn.textContent = "Fix This Now →";
+            resultsActionBtn.className = "btn-cartoon btn-results-cta hover-pop thick-border font-space btn-pink-style";
+            resultsActionBtn.href = `https://wa.me/917479638555?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20Red%20Alert%20score%20of%20${quizScore}/10.%20I%20need%20a%20website%20right%20now!`;
           }
         } else if (quizScore <= 6) {
           if (resultsEmblem) resultsEmblem.textContent = "⚠️";
           if (resultsCategoryTitle) {
-            resultsCategoryTitle.textContent = "Warning!";
-            resultsCategoryTitle.style.color = "var(--neon-orange)";
+            resultsCategoryTitle.textContent = "⚠️ At Risk";
+            resultsCategoryTitle.style.color = "#ffb129";
           }
           if (resultsTitleText) resultsTitleText.textContent = "⚠️ Your Business Is At Risk!";
           if (resultsParagraph) {
-            resultsParagraph.textContent = "Your competitors are online and actively attracting customers that could be yours. Without a website, you're invisible to hundreds of potential customers searching for your services daily.";
+            resultsParagraph.textContent = "You have a basic digital footprint, but you are losing massive growth opportunities. A high-converting dedicated website will bridge this gap and turn casual lookers into regular clients.";
           }
           if (resultsActionBtn) {
             resultsActionBtn.textContent = "Fix This Now →";
@@ -703,20 +710,28 @@ document.addEventListener("DOMContentLoaded", () => {
             resultsActionBtn.href = `https://wa.me/917479638555?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20score%20of%20${quizScore}/10.%20I%20want%20to%20fix%20this%20asap!`;
           }
         } else {
-          if (resultsEmblem) resultsEmblem.textContent = "🚨";
+          if (resultsEmblem) resultsEmblem.textContent = "✅";
           if (resultsCategoryTitle) {
-            resultsCategoryTitle.textContent = "Red Alert!";
-            resultsCategoryTitle.style.color = "var(--neon-pink)";
+            resultsCategoryTitle.textContent = "✅ Doing Great";
+            resultsCategoryTitle.style.color = "#00e676";
           }
-          if (resultsTitleText) resultsTitleText.textContent = "🚨 Your Business Needs A Website RIGHT NOW!";
+          if (resultsTitleText) resultsTitleText.textContent = "Awesome Digital Presence!";
           if (resultsParagraph) {
-            resultsParagraph.textContent = "Every single day without a website is costing you real customers and real money. While you're reading this, someone just Googled your service — and found your competitor instead of you. Let's change that today.";
+            resultsParagraph.textContent = "Awesome! Your business is highly digitally active. Let's upgrade you to a premium, high-performance digital experience to completely dominate your competitors and automate your scaling!";
           }
           if (resultsActionBtn) {
-            resultsActionBtn.textContent = "Fix This Now →";
-            resultsActionBtn.className = "btn-cartoon btn-results-cta hover-pop thick-border font-space btn-pink-style";
-            resultsActionBtn.href = `https://wa.me/917479638555?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20Red%20Alert%20score%20of%20${quizScore}/10.%20I%20need%20a%20website%20right%20now!`;
+            resultsActionBtn.textContent = "See How I Can Help →";
+            resultsActionBtn.className = "btn-cartoon btn-results-cta hover-pop thick-border font-space btn-green-style";
+            resultsActionBtn.href = `https://wa.me/917479638555?text=Hello%20Pratik!%20I%20just%20completed%20the%20Website%20Readiness%20Quiz%20and%20got%20a%20score%20of%20${quizScore}/10.%20I%27d%20love%20to%20see%20how%20you%20can%20help!`;
           }
+        }
+
+        if (quizScore === 10 && typeof confetti === 'function') {
+          confetti({
+            particleCount: 150,
+            spread: 80,
+            origin: { y: 0.6 }
+          });
         }
       }
 
@@ -726,6 +741,9 @@ document.addEventListener("DOMContentLoaded", () => {
           quizPlay.classList.remove("hidden");
           currentQuestionIdx = 0;
           quizScore = 0;
+          if (quizLiveScoreVal) {
+            quizLiveScoreVal.textContent = "0";
+          }
           showQuestion();
         });
       }

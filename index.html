@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prayosh Creations — Premium 2D Cartoon Style Web Agency</title>
+  <link rel="icon" type="image/png" href="./images/pratikprofile.png">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <!-- CDNs for External Libraries -->
@@ -17,6 +18,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
   <!-- JavaScript Script Element -->
   <script defer src="./script.js"></script>
 </head>
@@ -28,7 +32,8 @@
   <!-- Responsive Mobile Menu Sidebar (Drawer) -->
   <aside id="mobile-nav" class="mobile-nav">
     <div class="mobile-nav-header">
-      <a href="./index.html" class="logo">
+      <a href="/" class="logo">
+        <img src="./images/pratikprofile.png" alt="Prayosh Logo" class="logo-img">
         <span class="logo-main text-white text-lg">PRAYOSH</span>
         <span class="logo-badge">Creations</span>
       </a>
@@ -37,14 +42,14 @@
       </button>
     </div>
     <ul class="mobile-nav-links">
-      <li><a href="./index.html" class="mobile-nav-link active">Home</a></li>
-      <li><a href="./services.html" class="mobile-nav-link">Services</a></li>
-      <li><a href="./portfolio.html" class="mobile-nav-link">Portfolio</a></li>
-      <li><a href="./about.html" class="mobile-nav-link">About Us</a></li>
-      <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/" class="mobile-nav-link active">Home</a></li>
+      <li><a href="/services" class="mobile-nav-link">Services</a></li>
+      <li><a href="/portfolio" class="mobile-nav-link">Portfolio</a></li>
+      <li><a href="/about" class="mobile-nav-link">About Us</a></li>
+      <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
     </ul>
-    <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta text-center justify-center font-mono">
-      GET QUOTE <i class="fa-solid fa-fire text-lime-400"></i>
+    <a href="/contact" class="nav-cta text-center justify-center font-mono">
+      GET QUOTE
     </a>
   </aside>
 
@@ -52,22 +57,23 @@
   <header class="navbar-wrapper navbar-anim">
     <nav class="navbar thick-border shadow-cartoon-sm" aria-label="Main Navigation">
       <!-- Brand Logo -->
-      <a href="./index.html" class="logo">
+      <a href="/" class="logo">
+        <img src="./images/pratikprofile.png" alt="Prayosh Logo" class="logo-img">
         <span class="logo-main">PRAYOSH</span>
         <span class="logo-badge">Creations</span>
       </a>
 
       <!-- Desktop Links -->
       <ul class="nav-links">
-        <li><a href="./index.html" class="nav-link active">Home</a></li>
-        <li><a href="./services.html" class="nav-link">Services</a></li>
-        <li><a href="./portfolio.html" class="nav-link">Portfolio</a></li>
-        <li><a href="./about.html" class="nav-link">About</a></li>
-        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        <li><a href="/" class="nav-link active">Home</a></li>
+        <li><a href="/services" class="nav-link">Services</a></li>
+        <li><a href="/portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="/about" class="nav-link">About</a></li>
+        <li><a href="/contact" class="nav-link">Contact</a></li>
       </ul>
 
       <!-- Desktop Action CTA button -->
-      <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%20interested%20in%20building%20a%20website%20for%20my%20business." target="_blank" class="nav-cta thin-border" id="nav-cta-action">
+      <a href="/contact" class="nav-cta thin-border" id="nav-cta-action">
         Get Quote <span class="text-xs">✦</span>
       </a>
 
@@ -126,11 +132,11 @@
       <!-- Action call buttons group -->
       <div class="hero-cta-group btn-anim">
         <!-- View Work redirect badge -->
-        <a href="./portfolio.html" class="btn-cartoon btn-primary hover-pop thick-border">
+        <a href="/portfolio" class="btn-cartoon btn-primary hover-pop thick-border">
           View My Work <i class="fa-solid fa-arrow-right-long"></i>
         </a>
         <!-- Whatsapp click element -->
-        <a href="https://wa.me/917479638555?text=Hello%2520Pratik!%2520I'd%2520love%2520to%2520hire%2520you%2520for%2520my%2520agency%2520website!" target="_blank" class="btn-cartoon btn-secondary hover-pop thick-border">
+        <a href="https://wa.me/917479638555?text=Hi Pratik! I visited your portfolio and I'm interested in getting a website built for my business. Can we talk?" target="_blank" class="btn-cartoon btn-secondary hover-pop thick-border">
           <i class="fa-brands fa-whatsapp fa-xl"></i> Contact on WhatsApp
         </a>
       </div>
@@ -392,7 +398,7 @@
     <!-- Impact Statement in Large & Impactful Typography -->
     <div class="benefits-impact-statement">
       <p class="impact-text font-space">
-        "❝ Every month without a website is a month of lost customers, lost trust and lost revenue. ❞"
+        ❝ Every month without a website is a month of lost customers, lost trust and lost revenue. ❞
       </p>
     </div>
 
@@ -415,8 +421,11 @@
 
         <!-- Live Quiz State -->
         <div id="quiz-play" class="hidden">
-          <div class="quiz-progress-wrapper">
-            <div class="quiz-progress-text font-mono">Progress: <span id="current-q-num">1</span>/10</div>
+          <div class="quiz-progress-wrapper" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+              <div class="quiz-progress-text font-mono" style="margin-bottom: 0;">Progress: <span id="current-q-num">1</span>/10</div>
+              <div class="font-mono" style="font-weight: 800; font-size: 0.95rem; background: #0c0c10; border: 3px solid #000; border-radius: 8px; padding: 3px 10px; box-shadow: 2px 2px 0 #000; color: var(--neon-lime);">Score: <span id="quiz-live-score-val">0</span>/10</div>
+            </div>
             <div class="quiz-progress-bar-outer thick-border">
               <div id="quiz-progress-bar-inner" class="quiz-progress-bar-inner"></div>
             </div>
@@ -682,7 +691,7 @@
       
       <!-- Column 1: Brand Info -->
       <div class="footer-col brand-col">
-        <a href="./index.html" class="logo font-space" id="footer-logo">
+        <a href="/" class="logo font-space" id="footer-logo">
           <span class="logo-main">PRAYOSH</span>
           <span class="logo-badge">Creations</span>
         </a>
@@ -694,11 +703,11 @@
       <div class="footer-col links-col">
         <h3 class="footer-col-title font-space">Quick Links</h3>
         <ul class="footer-links-list">
-          <li><a href="./index.html" class="footer-link"><span class="arrow-indicator">→</span> Home</a></li>
-          <li><a href="./services.html" class="footer-link"><span class="arrow-indicator">→</span> Services</a></li>
-          <li><a href="./portfolio.html" class="footer-link"><span class="arrow-indicator">→</span> Portfolio</a></li>
-          <li><a href="./about.html" class="footer-link"><span class="arrow-indicator">→</span> About Us</a></li>
-          <li><a href="./contact.html" class="footer-link"><span class="arrow-indicator">→</span> Contact</a></li>
+          <li><a href="/" class="footer-link"><span class="arrow-indicator">→</span> Home</a></li>
+          <li><a href="/services" class="footer-link"><span class="arrow-indicator">→</span> Services</a></li>
+          <li><a href="/portfolio" class="footer-link"><span class="arrow-indicator">→</span> Portfolio</a></li>
+          <li><a href="/about" class="footer-link"><span class="arrow-indicator">→</span> About Us</a></li>
+          <li><a href="/contact" class="footer-link"><span class="arrow-indicator">→</span> Contact</a></li>
         </ul>
       </div>
 
