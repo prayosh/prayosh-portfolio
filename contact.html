@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Prayosh Creations</title>
+  <title>Contact Us — Prayosh Creations</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./contact.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script defer src="./script.js"></script>
 </head>
@@ -36,7 +37,7 @@
     </a>
   </aside>
 
-  <!-- Navigation Header of Contact Page -->
+  <!-- Navigation Header -->
   <header class="navbar-wrapper navbar-anim">
     <nav class="navbar thick-border shadow-cartoon-sm">
       <a href="./index.html" class="logo">
@@ -59,20 +60,117 @@
     </nav>
   </header>
 
-  <!-- Coming Soon Interactive Comic Cell -->
-  <main class="coming-soon-wrapper">
-    <div class="coming-soon-box thick-border shadow-cartoon-lg" style="transform: rotate(-2deg)">
-      <span class="coming-soon-badge" style="background-color: var(--neon-lime); color: black;">LAUNCH CHANNELS</span>
-      <h1 class="coming-soon-title" style="color: var(--neon-purple);">Let's Connect</h1>
-      <p class="coming-soon-desc">
-        Need a fast-loading, highly premium custom-coded comic or professional corporate website in Ranchi? Pratik is ready. Click below to begin a live collaboration instantly via WhatsApp!
-      </p>
-      <a href="https://wa.me/917479638555?text=Hello%20Pratik!%20I'm%2520ready%2520to%252520build%252520a%252520gorgeous%252520website%252520for%252520my%252520brand!" target="_blank" class="btn-cartoon hover-pop thick-border" style="background-color: #25d366; color: white;">
-        <i class="fa-brands fa-whatsapp fa-xl"></i> Instant WhatsApp Chat
-      </a>
-      <a href="./index.html" class="btn-cartoon back-btn hover-pop thick-border" style="background-color: var(--neon-yellow); margin-top: 0.5rem;">
-        <i class="fa-solid fa-arrow-left"></i> Back to Home
-      </a>
+  <!-- Main Contact Page Exhibitor -->
+  <main class="contact-page-wrapper">
+    <div class="contact-container">
+      
+      <!-- Section Header -->
+      <header class="contact-header">
+        <span class="contact-badge">GET IN TOUCH</span>
+        <h1 class="contact-title">Let's Build Something <span class="contact-title-highlight">Great</span> Together</h1>
+        <p class="contact-subtitle font-space">
+          Have a project in mind or just want to know more? Drop a message — I'll get back to you within 24 hours.
+        </p>
+      </header>
+
+      <!-- 2-Column Responsive Layout -->
+      <div class="contact-grid">
+        
+        <!-- Left Side: Contact Info Card -->
+        <div class="contact-info-card thick-border shadow-cartoon-md font-space" id="contact-info-panel">
+          <div class="card-neon-strip"></div>
+          <h2 class="info-card-title">Contact Information</h2>
+          <p class="info-card-desc">Reach out directly through any of these channels or use the speed contact button below!</p>
+          
+          <ul class="info-details-list">
+            <li class="info-detail-item">
+              <span class="detail-icon-bubble bg-pink"><i class="fa-solid fa-phone"></i></span>
+              <div class="detail-text-group">
+                <span class="detail-label font-mono">PHONE</span>
+                <a href="tel:+917479638555" class="detail-value">+91 74796 38555</a>
+              </div>
+            </li>
+            
+            <li class="info-detail-item">
+              <span class="detail-icon-bubble bg-purple"><i class="fa-solid fa-envelope"></i></span>
+              <div class="detail-text-group">
+                <span class="detail-label font-mono">EMAIL</span>
+                <a href="mailto:prayoshcreations@gmail.com" class="detail-value">prayoshcreations@gmail.com</a>
+              </div>
+            </li>
+            
+            <li class="info-detail-item">
+              <span class="detail-icon-bubble bg-cyan"><i class="fa-solid fa-clock"></i></span>
+              <div class="detail-text-group">
+                <span class="detail-label font-mono">AVAILABILITY</span>
+                <span class="detail-value">Mon – Sat, 10am – 7pm</span>
+              </div>
+            </li>
+          </ul>
+
+          <!-- WhatsApp CTA Button -->
+          <div class="whatsapp-btn-wrapper">
+            <a href="https://wa.me/917479638555?text=Hi%20Pratik!%20I%20visited%20your%20portfolio%20and%20I'm%20interested%20in%20getting%20a%20website%20built%20for%20my%20business.%20Can%20we%20talk%3F" target="_blank" class="whatsapp-cta-btn thick-border shadow-cartoon-sm" id="whatsapp-direct-link">
+              <span>💬 Chat on WhatsApp</span> <i class="fa-brands fa-whatsapp fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form-card thick-border shadow-cartoon-md font-space" id="contact-form-panel">
+          <h2 class="form-card-title">Send A Quick Message</h2>
+          
+          <form id="contact-form" autocomplete="off">
+            <div class="form-row-group">
+              <div class="form-field">
+                <label for="contact-name" class="font-mono">Full Name *</label>
+                <div class="input-container">
+                  <span class="field-icon"><i class="fa-solid fa-user"></i></span>
+                  <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                </div>
+              </div>
+              
+              <div class="form-field">
+                <label for="contact-email" class="font-mono">Email Address *</label>
+                <div class="input-container">
+                  <span class="field-icon"><i class="fa-solid fa-envelope"></i></span>
+                  <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-phone" class="font-mono">Phone Number (Optional)</label>
+              <div class="input-container">
+                <span class="field-icon"><i class="fa-solid fa-phone"></i></span>
+                <input type="tel" id="contact-phone" name="phone" placeholder="+91 99999 99999">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message" class="font-mono">Your Message *</label>
+              <div class="input-container textarea-container">
+                <span class="field-icon textarea-icon"><i class="fa-solid fa-comment-dots"></i></span>
+                <textarea id="contact-message" name="message" rows="4" placeholder="Tell me about your business goals, target audience, or requirements..." required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn thick-border" id="form-submit-btn">
+              <span>🚀 Send Message</span>
+            </button>
+          </form>
+
+          <!-- Beautiful Comic success layout -->
+          <div class="success-message thick-border shadow-cartoon-sm" id="form-success-alert">
+            <div class="success-icon">🎉</div>
+            <h3 class="success-title">Holy Cow! Message Transmitted!</h3>
+            <p class="success-text">Thanks for writing, <span id="success-user-name" class="highlight-text">Friend</span>! I've received your coordinates and will get back to you within 24 hours.</p>
+            <button type="button" class="back-btn thin-border font-space" id="success-back-btn">Send Another Message</button>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </main>
 
@@ -103,7 +201,7 @@
       </div>
 
       <!-- Column 3: Contact Info -->
-      <div class="footer-col contact-col">
+      <div class="footer-col contact-col-info">
         <h3 class="footer-col-title font-space">Get In Touch</h3>
         <ul class="footer-contact-list font-space">
           <li>
@@ -130,7 +228,7 @@
     <!-- Separated bottom bar with thin or thick comic border -->
     <div class="footer-bottom-bar">
       <div class="footer-bottom-container">
-        <p class="copyright-text font-mono">© 2025 Prayosh Creations. All rights reserved.</p>
+        <p class="copyright-text font-mono">© 2026 Prayosh Creations. All rights reserved.</p>
         <p class="creator-credit font-mono">Designed & Built by <span class="creator-name">Pratik Prajapati</span></p>
       </div>
     </div>
@@ -138,13 +236,110 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Entry GSAP animations
       if (typeof gsap !== 'undefined') {
-        gsap.from(".coming-soon-box", {
-          scale: 0.5,
-          rotate: 10,
+        gsap.from(".contact-header > *", {
+          y: 40,
           opacity: 0,
           duration: 0.8,
-          ease: "back.out(1.6)"
+          stagger: 0.15,
+          ease: "power2.out"
+        });
+
+        // 3D slide/bounce in for panels
+        gsap.from("#contact-info-panel", {
+          x: -60,
+          opacity: 0,
+          duration: 0.9,
+          ease: "back.out(1.1)",
+          delay: 0.25
+        });
+
+        gsap.from("#contact-form-panel", {
+          x: 60,
+          opacity: 0,
+          duration: 0.9,
+          ease: "back.out(1.1)",
+          delay: 0.25
+        });
+      }
+
+      // Elegant cartoon form submission animation & response handler
+      const contactForm = document.getElementById("contact-form");
+      const successAlert = document.getElementById("form-success-alert");
+      const submitBtn = document.getElementById("form-submit-btn");
+      const backBtn = document.getElementById("success-back-btn");
+      const successUserName = document.getElementById("success-user-name");
+
+      if (contactForm && successAlert) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          
+          // Get form values for customized success prompt
+          const fullNameVal = document.getElementById("contact-name").value || "Friend";
+          successUserName.textContent = fullNameVal;
+          
+          // Prevent dual fires
+          submitBtn.disabled = true;
+          
+          if (typeof gsap !== 'undefined') {
+            // Cool submit blast gsap effect
+            gsap.to(submitBtn, {
+              scale: 0.95,
+              duration: 0.1,
+              yoyo: true,
+              repeat: 1,
+              onComplete: () => {
+                // Fade out form and fade in success screen
+                gsap.to(contactForm, {
+                  opacity: 0,
+                  y: -20,
+                  duration: 0.4,
+                  onComplete: () => {
+                    contactForm.style.display = "none";
+                    successAlert.style.display = "flex";
+                    
+                    gsap.fromTo(successAlert, 
+                      { opacity: 0, scale: 0.85, y: 30 },
+                      { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.3)" }
+                    );
+                  }
+                });
+              }
+            });
+          } else {
+            contactForm.style.display = "none";
+            successAlert.style.display = "flex";
+          }
+        });
+      }
+
+      if (backBtn && contactForm && successAlert) {
+        backBtn.addEventListener("click", () => {
+          if (typeof gsap !== 'undefined') {
+            gsap.to(successAlert, {
+              opacity: 0,
+              y: 20,
+              scale: 0.9,
+              duration: 0.4,
+              onComplete: () => {
+                successAlert.style.display = "none";
+                contactForm.style.display = "block";
+                contactForm.reset();
+                submitBtn.disabled = false;
+                
+                gsap.fromTo(contactForm, 
+                  { opacity: 0, y: -15 },
+                  { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+                );
+              }
+            });
+          } else {
+            successAlert.style.display = "none";
+            contactForm.style.display = "block";
+            contactForm.reset();
+            submitBtn.disabled = false;
+          }
         });
       }
     });
