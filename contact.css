@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .contact-page-wrapper {
-  padding: 8rem 1.5rem 6rem 1.5rem;
+  padding: 4.5rem 1.5rem 6rem 1.5rem;
   background-color: var(--bg-dark);
   position: relative;
   overflow: hidden;
@@ -74,7 +74,7 @@
   align-items: start;
 }
 
-/* LEFT SIDE: Contact Info Card */
+/* LEFT SIDE: Contact Info Card with Max Width constraints */
 .contact-info-card {
   background-color: var(--bg-card);
   border: 3px solid #000000 !important;
@@ -83,6 +83,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: 8px 8px 0px #000000;
+  width: 100%;
 }
 
 .card-neon-strip {
@@ -266,6 +267,7 @@ a.detail-value:hover {
 }
 
 .input-container input,
+.input-container select,
 .input-container textarea {
   width: 100%;
   padding: 1rem 1.2rem 1rem 2.8rem;
@@ -277,6 +279,14 @@ a.detail-value:hover {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   transition: all 0.2s ease;
+  appearance: none;
+}
+
+.input-container select option {
+  background-color: #1a1a24;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
 }
 
 .input-container textarea {
@@ -288,8 +298,25 @@ a.detail-value:hover {
   top: 16px;
 }
 
+/* Custom select dropdown triangle arrow */
+.select-container::after {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free", "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 16px;
+  color: #6b7280;
+  pointer-events: none;
+  font-size: 1.15rem;
+}
+
+.input-container select:focus + .field-icon {
+  color: var(--neon-lime);
+}
+
 /* Clean Accent cartoon focus highlights */
 .input-container input:focus,
+.input-container select:focus,
 .input-container textarea:focus {
   outline: none;
   border-color: var(--neon-lime) !important;
@@ -298,8 +325,19 @@ a.detail-value:hover {
 }
 
 .input-container input:focus + .field-icon,
+.input-container select:focus + .field-icon,
 .input-container textarea:focus + .field-icon {
   color: var(--neon-lime);
+}
+
+/* Footer note */
+.form-footer-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 /* Submit Block */
@@ -417,7 +455,7 @@ a.detail-value:hover {
 
 @media (max-width: 768px) {
   .contact-page-wrapper {
-    padding: 6.5rem 1rem 4rem 1rem;
+    padding: 3rem 1rem 4rem 1rem;
   }
 
   .contact-title {

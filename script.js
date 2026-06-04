@@ -756,7 +756,52 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+    // --- HERO PORTFOLIO SLIDESHOW AUTO ENGINE ---
+    const heroSlides = document.querySelectorAll(".hero-slideshow .hero-slide");
+    if (heroSlides.length > 0) {
+      let currentHeroIdx = 0;
+      
+      // Initial sparkle/pop animation for the first slide's caption label
+      const initialCaption = heroSlides[0].querySelector(".slide-caption");
+      if (initialCaption && typeof gsap !== 'undefined') {
+        gsap.fromTo(initialCaption, 
+          { scale: 0, rotation: -10 },
+          { scale: 1, rotation: -1, duration: 0.6, ease: "back.out(1.8)", delay: 1.5 }
+        );
+      }
 
+      setInterval(() => {
+        const prevSlide = heroSlides[currentHeroIdx];
+        const nextHeroIdx = (currentHeroIdx + 1) % heroSlides.length;
+        const nextSlide = heroSlides[nextHeroIdx];
+
+        // Transition states of slides
+        prevSlide.classList.remove("active");
+        nextSlide.classList.add("active");
+
+        // Animate key caption with playful spring bounce
+        const caption = nextSlide.querySelector(".slide-caption");
+        if (caption && typeof gsap !== 'undefined') {
+          // Slide tags can pop with varying neon accent background colors
+          const cardColors = [
+            "var(--neon-lime)",
+            "var(--neon-cyan)",
+            "var(--neon-purple)",
+            "var(--neon-pink)",
+            "var(--neon-orange)",
+            "var(--neon-yellow)"
+          ];
+          caption.style.backgroundColor = cardColors[nextHeroIdx % cardColors.length];
+          
+          gsap.fromTo(caption, 
+            { scale: 0, rotation: Math.random() * 12 - 6 },
+            { scale: 1, rotation: Math.random() * 4 - 2, duration: 0.55, ease: "back.out(1.8)" }
+          );
+        }
+
+        currentHeroIdx = nextHeroIdx;
+      }, 3000);
+    }
 
   }
 });

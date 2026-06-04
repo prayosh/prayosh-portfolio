@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .portfolio-page-wrapper {
-  padding: 8rem 1.5rem 6rem 1.5rem;
+  padding: 4.5rem 1.5rem 6rem 1.5rem;
   background-color: var(--bg-dark);
   position: relative;
   overflow: hidden;
@@ -351,7 +351,7 @@
 
 @media (max-width: 768px) {
   .portfolio-page-wrapper {
-    padding: 6.5rem 1rem 4rem 1rem;
+    padding: 3rem 1rem 4rem 1rem;
   }
 
   .portfolio-title {

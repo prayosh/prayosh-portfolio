@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .about-page-wrapper {
-  padding: 8rem 1.5rem 5rem 1.5rem;
+  padding: 4.5rem 1.5rem 5rem 1.5rem;
   background-color: var(--bg-dark);
   position: relative;
   overflow: hidden;
@@ -46,6 +46,13 @@
   background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
   background-size: 16px 16px;
   overflow: visible;
+  box-shadow: 12px 12px 0px var(--neon-purple);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.about-avatar-box:hover {
+  transform: translateY(-5px) rotate(1deg);
+  box-shadow: 16px 16px 0px var(--neon-purple);
 }
 
 /* Retro available blinking badge */
@@ -132,7 +139,32 @@
 
 .avatar-profile-base {
   z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.25s cubic-bezier(0.18, 0.9, 0.32, 1.25);
+}
+
+.avatar-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 11px;
+  border: none;
+  box-shadow: none;
+  background-color: #ffffff;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .avatar-profile-img {
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    box-shadow: none;
+  }
 }
 
 .avatar-profile-base .profile-emoji {
@@ -461,7 +493,7 @@
 
 @media (max-width: 768px) {
   .about-page-wrapper {
-    padding: 6.5rem 1rem 4rem 1rem;
+    padding: 3rem 1rem 4rem 1rem;
   }
   
   .about-profile-title {
